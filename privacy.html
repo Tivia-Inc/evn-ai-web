@@ -31,14 +31,459 @@ footer a{color:var(--muted)}
 <header><a href="./">Evn AI</a><nav class="lang"><button data-l="ko">한국어</button> <button data-l="en">English</button></nav></header>
 <main>
 <article lang="ko" data-l="ko">
-<h1>개인정보 처리방침</h1>
-<p>Evn AI 출시 전에 이 주소에 게시합니다.</p>
-<p class="muted">문의: <a href="mailto:admin@tivia.kr">admin@tivia.kr</a></p>
+<h1>Evn AI 개인정보 처리방침</h1>
+<p><strong>시행일: 2026-10-04</strong> · 운영자: TIVIA Inc. · 문의: admin@tivia.kr</p>
+<p>TIVIA Inc.(이하 "회사")는 Evn AI 앱(이하 "앱")을 운영하면서 「개인정보 보호법」을 지킵니다. 이 방침은 앱이 어떤 정보를 어디에 두고, 누구에게 보내며, 언제 지우는지 설명합니다.</p>
+<h2>한눈에 보기</h2>
+<ul>
+<li>회원 가입이 없습니다. 앱을 처음 열면 익명 사용자 ID가 하나 만들어지고, 이름·전화번호는 받지 않습니다.</li>
+<li>음식 사진은 음식을 알아보기 위해 회사의 서버 함수를 거쳐 Google의 AI 서비스(Gemini API, 미국)로 전송됩니다. 회사 서버에는 사진을 저장하지 않고, 서버 기록(로그)에도 남기지 않습니다.</li>
+<li>스캔 사진과 결과(음식, 혈당 부하, 칼로리), 키·몸무게·성별·나이대는 이용자의 기기에만 저장됩니다.</li>
+<li>이용 통계 도구에는 혈당 부하·등급·칼로리·신체 정보·음식 이름·사진을 보내지 않습니다.</li>
+<li>개인정보를 판매하지 않고, 광고에 쓰지 않습니다.</li>
+<li>설정 → "내 데이터 모두 지우기"로 기기 데이터와 서버의 익명 계정을 함께 지울 수 있습니다.</li>
+</ul>
+<h2>1. 처리하는 정보</h2>
+<div class="t"><table>
+<thead>
+<tr>
+<th>정보</th>
+<th>저장 위치</th>
+<th>전송받는 곳(국가)</th>
+<th>보관 기간</th>
+<th>처리 근거</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>음식 사진(기기에서 긴 변 1024px JPEG로 줄이고 위치 정보 등 EXIF를 지운 것)</td>
+<td>이용자 기기</td>
+<td>회사 서버 함수(Supabase. 한국 음식 DB를 쓰면 대한민국 서울, 미국 음식 DB를 쓰면 미국 동부에서 실행) → Google LLC(미국)</td>
+<td>기기: 이용자가 지울 때까지 · 회사 서버: 저장하지 않음(응답 후 메모리에서 폐기) · Google: 2조</td>
+<td>필수 동의(국외 이전 포함), 첫 스캔 전 동의 화면</td>
+</tr>
+<tr>
+<td>스캔 결과(음식 목록, 양, 혈당 부하, 칼로리)</td>
+<td>이용자 기기</td>
+<td>보내지 않음</td>
+<td>이용자가 지울 때까지</td>
+<td>기기 안에서만 처리하며 회사는 볼 수 없음</td>
+</tr>
+<tr>
+<td>키·몸무게·성별·나이대</td>
+<td>이용자 기기</td>
+<td>보내지 않음</td>
+<td>이용자가 지울 때까지</td>
+<td>선택 동의. 입력하지 않으면 처리하지 않음</td>
+</tr>
+<tr>
+<td>익명 사용자 ID</td>
+<td>Supabase(서울)</td>
+<td>RevenueCat(미국), PostHog(미국)</td>
+<td>계정 삭제 때까지(RevenueCat·PostHog 보관분은 5조)</td>
+<td>서비스 제공(계약 이행)</td>
+</tr>
+<tr>
+<td>구독 정보(상품, 구매·체험·갱신·해지 내역, 스토어 거래 정보)</td>
+<td>RevenueCat</td>
+<td>RevenueCat(미국)</td>
+<td>구독 관리·구매 복원·환불 처리에 필요한 기간, 또는 이용자가 삭제를 요청할 때까지</td>
+<td>계약 이행</td>
+</tr>
+<tr>
+<td>하루 스캔 횟수(익명 ID, 현지 날짜, 횟수)</td>
+<td>Supabase(서울)</td>
+<td>없음</td>
+<td>7일 뒤 자동 삭제</td>
+<td>계약 이행(하루 30회 한도)</td>
+</tr>
+<tr>
+<td>무료 첫 스캔 사용 기록(익명 ID, 사용 시각)</td>
+<td>Supabase(서울)</td>
+<td>없음</td>
+<td>계정 삭제 때까지</td>
+<td>계약 이행, 부정 이용 방지</td>
+</tr>
+<tr>
+<td>이용 통계 이벤트(화면 진입, 버튼 누름, 스캔 처리 결과와 응답 시간, 결제 단계, 온보딩 답변(주로 먹는 곳, 앱을 알게 된 경로, 신체 정보 입력 여부. 목표와 식후 졸림·허기 빈도 질문은 답했는지만 보내고 답한 내용은 보내지 않음), 국가·언어·플랫폼·앱 버전·기기 정보)</td>
+<td>PostHog</td>
+<td>PostHog(미국)</td>
+<td>최대 1년(회사가 쓰는 PostHog 요금제의 보관 기간), 또는 이용자가 삭제를 요청할 때까지</td>
+<td>처리방침 고지(정당한 이익)</td>
+</tr>
+<tr>
+<td>문의(유형, 내용, 답장 이메일(선택), 자동 첨부 정보: 앱 버전·플랫폼·국가·음식 DB 버전·마지막 스캔 처리 결과·익명 ID)</td>
+<td>Supabase(서울)</td>
+<td>보내지 않음</td>
+<td>이용자가 데이터를 지우거나 삭제를 요청할 때까지</td>
+<td>이용자 요청</td>
+</tr>
+<tr>
+<td>인식 오류 신고(예측된 음식 ID 목록, 이용자가 고친 음식·양, 신고 유형, 음식 DB 버전, 모델 이름)</td>
+<td>Supabase(서울)</td>
+<td>없음</td>
+<td>이용자가 데이터를 지울 때까지</td>
+<td>이용자 요청</td>
+</tr>
+<tr>
+<td>서버 운영 기록(익명 ID의 해시값, 국가, 모델 이름, 응답 시간, 토큰 수, 처리 결과, 인프라 접속 기록의 IP 주소·요청 시각)</td>
+<td>Supabase</td>
+<td>없음</td>
+<td>최대 7일(Supabase 로그 보관 기간)</td>
+<td>보안·장애 대응(정당한 이익)</td>
+</tr>
+</tbody>
+</table></div>
+<p>문의와 인식 오류 신고에는 사진·혈당 부하·칼로리가 들어가지 않으며, 이용자가 "보내기"를 누를 때만 전송합니다.</p>
+<p>회사가 받지 않는 정보: 이름, 전화번호, 연락처, 정밀 위치(사진의 위치 정보는 전송 전에 지웁니다), 광고 식별자(IDFA·광고 ID), 사진 보관함의 다른 사진(이용자가 고른 사진만 읽습니다), 결제 카드 정보(Apple·Google이 직접 처리합니다).</p>
+<p>앱이 쓰는 권한은 다음과 같습니다.</p>
+<ul>
+<li><strong>카메라:</strong> 음식을 찍을 때만 씁니다.</li>
+<li><strong>사진:</strong> 이용자가 고른 사진만 읽습니다.</li>
+<li><strong>알림:</strong> 무료 체험이 끝나기 하루 전 알림에 씁니다. 기기 안에서 예약하는 알림이라 회사 서버를 거치지 않습니다.</li>
+</ul>
+<h2>2. 음식 사진 처리 과정</h2>
+<ol>
+<li>기기에서 사진을 긴 변 1024px로 줄이고, 위치 정보를 포함한 EXIF를 지웁니다.</li>
+<li>사진을 암호화 통신(HTTPS)으로 회사의 서버 함수에 보냅니다. 서버 함수는 구독과 이용 한도를 확인한 뒤 사진을 Google Gemini API(유료 티어)로 넘깁니다. 익명 ID 등 이용자를 알아볼 수 있는 정보는 Google에 보내지 않습니다.</li>
+<li>Google은 사진 속 음식 이름과 추정 중량만 돌려줍니다. 혈당 부하와 칼로리는 앱이 기기 안에서 음식 DB로 계산합니다.</li>
+<li>회사 서버는 사진과 인식 결과 원문을 저장하지 않고, 서버 기록에도 남기지 않습니다.</li>
+<li>Google은 Gemini API 유료 서비스 약관에 따라 사진을 처리합니다. 회사는 유료 티어를 사용합니다. 이 약관에 따라 Google은 요청을 제품 개선이나 모델 학습에 쓰지 않으며, 남용 감지와 법적 요구 대응을 위해서만 55일 동안 보관합니다.</li>
+</ol>
+<h2>3. 처리 목적</h2>
+<ul>
+<li>음식 인식, 혈당 부하·칼로리 계산(계산은 기기 안에서 합니다)</li>
+<li>칼로리 목표 계산(선택, 기기 안에서 합니다)</li>
+<li>구독 제공과 확인, 무료 첫 스캔과 하루 30회 한도 관리, 부정 이용 방지</li>
+<li>앱 개선을 위한 이용 통계(단계별 이탈, 오류율, 응답 시간)와 장애 시 스캔 긴급 중지</li>
+<li>문의 답변, 인식 오류를 고치기 위한 음식 DB 수정</li>
+<li>보안 유지와 장애 대응</li>
+</ul>
+<p>회사는 이 정보를 광고나 맞춤형 광고에 쓰지 않고, 판매하지 않습니다.</p>
+<h2>4. 처리 위탁과 국외 이전</h2>
+<p>회사는 개인정보를 제3자에게 판매하거나 제공하지 않습니다. 서비스 운영을 위해 아래 업체에 처리를 맡기며, 일부는 국외에서 처리됩니다.</p>
+<div class="t"><table>
+<thead>
+<tr>
+<th>받는 자</th>
+<th>국가</th>
+<th>항목</th>
+<th>목적</th>
+<th>시기·방법</th>
+<th>보관 기간</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Google LLC(Gemini API)</td>
+<td>미국</td>
+<td>음식 사진</td>
+<td>음식 인식</td>
+<td>스캔할 때마다 HTTPS로 전송</td>
+<td>남용 감지 목적으로 55일(Google 유료 API 약관)</td>
+</tr>
+<tr>
+<td>RevenueCat, Inc.</td>
+<td>미국</td>
+<td>익명 ID, 구독·구매 정보</td>
+<td>구독 관리, 구매 복원</td>
+<td>앱 실행·구매·복원 때 HTTPS로 전송</td>
+<td>구독 관리 기간 또는 삭제 요청 때까지</td>
+</tr>
+<tr>
+<td>PostHog, Inc.(US Cloud)</td>
+<td>미국</td>
+<td>익명 ID, 이용 통계 이벤트, 기기·앱 정보</td>
+<td>이용 통계, 스캔 긴급 중지</td>
+<td>앱을 쓰는 동안 HTTPS로 전송</td>
+<td>최대 1년 또는 삭제 요청 때까지</td>
+</tr>
+<tr>
+<td>Supabase, Inc.(AWS 서울 리전. 서버 함수는 미국 음식 DB 사용 시 미국 동부에서 실행)</td>
+<td>대한민국(서버 함수 일부 미국)</td>
+<td>익명 ID, 스캔 횟수, 무료 스캔 기록, 문의, 인식 오류 신고, 운영 기록, 사진 중계(저장하지 않음)</td>
+<td>서버와 DB 운영</td>
+<td>HTTPS</td>
+<td>1조 표와 같음</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>각 업체의 개인정보 처리방침: Google https://policies.google.com/privacy · RevenueCat https://www.revenuecat.com/privacy · PostHog https://posthog.com/privacy · Supabase https://supabase.com/privacy</li>
+<li>결제는 Apple(App Store)과 Google(Google Play)이 이용자 계정으로 직접 처리합니다. 회사는 결제 수단 정보를 받지 않습니다.</li>
+<li>사진 국외 전송에는 동의하지 않을 수 있습니다. 동의하지 않으면 사진 분석을 쓸 수 없습니다.</li>
+<li>RevenueCat·PostHog로의 전송은 구독 제공과 서비스 운영에 필요합니다. 원하지 않으면 앱 사용을 멈추고 6조의 방법으로 삭제를 요청할 수 있습니다. 이용 통계 수집을 끄는 설정은 따로 없습니다.</li>
+</ul>
+<h2>5. 보관 기간과 파기</h2>
+<p><strong>"내 데이터 모두 지우기"(설정)를 누르면</strong> 기기의 사진·스캔 기록·신체 정보·설정을 지우고, 서버의 익명 계정을 삭제합니다. 계정을 지우면 하루 스캔 횟수, 무료 첫 스캔 기록, 문의, 인식 오류 신고가 함께 지워집니다. 다음에 앱을 열면 새 익명 ID가 만들어집니다.</p>
+<p>다음은 이 버튼으로 지워지지 않습니다.</p>
+<ul>
+<li><strong>구독:</strong> Apple·Google에서 따로 해지해야 합니다.</li>
+<li><strong>RevenueCat의 구독 기록:</strong> 구독 관리, 구매 복원, 환불 처리에 필요해 남습니다. 삭제를 원하면 6조의 방법으로 요청해 주세요. 회사가 확인한 뒤 직접 지웁니다.</li>
+<li><strong>PostHog의 이용 통계 이벤트:</strong> 삭제를 원하면 6조의 방법으로 요청해 주세요. 회사가 확인한 뒤 직접 지웁니다.</li>
+<li><strong>admin@tivia.kr로 보내신 이메일.</strong> 요청하시면 지웁니다.</li>
+</ul>
+<p>서버 삭제가 실패하면 기기 데이터는 지워지고 서버 기록은 남을 수 있습니다. 문의하기나 admin@tivia.kr로 알려 주시면 지웁니다.</p>
+<p><strong>앱만 삭제하면</strong> 기기 데이터는 함께 지워지지만, 서버의 익명 계정 기록(무료 첫 스캔 기록, 문의, 인식 오류 신고)은 남습니다. 앱을 지우기 전에 "내 데이터 모두 지우기"를 눌러 주세요. 오래 쓰지 않은 익명 계정을 자동으로 지우지는 않습니다.</p>
+<p><strong>기기 백업:</strong> 기기에 저장된 사진·기록·신체 정보는 이용자의 기기 백업(iCloud 백업, Google 백업)에 포함될 수 있습니다. 덕분에 새 기기로 옮길 때 기록이 유지됩니다. 앱에서 데이터를 지워도 이미 만들어진 백업에는 남을 수 있으니, 백업은 각 기기의 백업 설정에서 관리해 주세요. 회사는 이 백업에 접근할 수 없습니다.</p>
+<p><strong>파기 방법:</strong> 전자 파일은 복구할 수 없는 방법으로 지웁니다. 회사는 개인정보를 종이로 보관하지 않습니다.</p>
+<p>결제 기록은 Apple·Google·RevenueCat이 각자의 방침에 따라 보관합니다.</p>
+<h2>6. 이용자의 권리와 행사 방법</h2>
+<p>이용자는 언제든 개인정보 열람, 정정, 삭제, 처리 정지, 동의 철회를 요구할 수 있습니다.</p>
+<ul>
+<li><strong>앱에서 직접:</strong> 설정 → "내 데이터 모두 지우기". 신체 정보만 지우거나 선택 동의만 철회하는 메뉴는 따로 없고, 이 기능으로 함께 지워집니다.</li>
+<li><strong>문의로 요청:</strong> 앱의 설정 → "문의하기"로 보내 주시면 익명 ID가 자동으로 함께 전달되어 서버 기록을 찾을 수 있습니다. admin@tivia.kr로도 받습니다. 요청을 받은 날부터 10일 안에 결과를 알려 드립니다.</li>
+<li><strong>동의 철회:</strong> 사진 국외 전송 동의는 "내 데이터 모두 지우기"로 철회할 수 있습니다. 철회하면 사진 분석을 쓸 수 없습니다. 지운 뒤에는 첫 스캔 전에 동의 화면이 다시 나옵니다.</li>
+<li>법정대리인이나 위임받은 사람을 통해서도 요구할 수 있습니다.</li>
+</ul>
+<h2>7. 만 18세 이상 이용</h2>
+<p>앱은 만 18세 이상을 대상으로 합니다. 온보딩에서 이를 알리고, 나이대 선택지에 18세 미만을 두지 않습니다. 회사는 만 14세 미만 아동의 개인정보를 알면서 처리하지 않으며, 그런 사실을 알게 되면 지체 없이 지웁니다.</p>
+<h2>8. 안전성 확보 조치</h2>
+<ul>
+<li>모든 통신을 HTTPS로 암호화합니다.</li>
+<li>사진은 서버에 저장하지 않고, 서버 기록에 사진과 인식 결과 원문을 남기지 않습니다.</li>
+<li>사진의 위치 정보는 전송 전에 기기에서 지웁니다.</li>
+<li>서버 DB에 행 단위 접근 통제를 켰습니다. 앱은 자기 문의·신고를 쓰기만 할 수 있고, 읽기는 서버 키로만 됩니다.</li>
+<li>API 키 등 비밀값은 서버에만 둡니다.</li>
+<li>이용 통계에는 건강 관련 수치를 보내지 않고, 화면 녹화(세션 리플레이)와 자동 수집을 껐습니다.</li>
+<li>서버 데이터에 접근할 수 있는 사람을 최소한으로 둡니다.</li>
+</ul>
+<h2>9. 자동 수집 장치</h2>
+<p>앱은 쿠키를 쓰지 않습니다. PostHog SDK가 1조의 이용 통계 이벤트를 보냅니다. 광고 식별자를 쓰지 않고, 행태정보로 맞춤형 광고를 하지 않습니다. PostHog에는 접속 IP를 저장하지 않도록 설정했습니다.</p>
+<h2>10. 개인정보 보호책임자와 권익 침해 구제</h2>
+<ul>
+<li>개인정보 보호책임자: 이태희(대표이사) · admin@tivia.kr</li>
+<li>회사: 주식회사 티비야(TIVIA Inc.) · 서울특별시 강남구 강남대로112길 47, 2층 428에이호(논현동)</li>
+</ul>
+<p>개인정보 침해에 대한 상담이나 구제가 필요하면 아래 기관에 문의할 수 있습니다.</p>
+<ul>
+<li>개인정보분쟁조정위원회: 1833-6972, www.kopico.go.kr</li>
+<li>개인정보침해신고센터: 국번 없이 118, privacy.kisa.or.kr</li>
+<li>대검찰청: 국번 없이 1301, www.spo.go.kr</li>
+<li>경찰청: 국번 없이 182, ecrm.police.go.kr</li>
+</ul>
+<h2>11. 방침 변경</h2>
+<p>방침을 바꾸면 시행 7일 전에 이 페이지와 앱에서 알립니다. 수집 항목이나 위탁 업체가 바뀌는 등 이용자에게 중요한 변경은 30일 전에 알리고, 필요하면 다시 동의를 받습니다.</p>
+<p>미국에 사는 이용자에게는 영문 방침(Privacy Policy)의 미국 주법 관련 내용이 함께 적용됩니다.</p>
+<p><strong>변경 이력</strong></p>
+<ul>
+<li>2026-10-04: 제정</li>
+</ul>
 </article>
 <article lang="en" data-l="en">
-<h1>Privacy Policy</h1>
-<p>This page will be published here before Evn AI launches.</p>
-<p class="muted">Contact: <a href="mailto:admin@tivia.kr">admin@tivia.kr</a></p>
+<h1>Evn AI Privacy Policy</h1>
+<p><strong>Effective date: 2026-10-04</strong> · Operator: TIVIA Inc., Unit 428A, 2F, 47 Gangnam-daero 112-gil, Gangnam-gu, Seoul, Republic of Korea · Contact: admin@tivia.kr</p>
+<p>Evn AI (the "app") is made by TIVIA Inc. ("we", "us"), a company based in the Republic of Korea. This policy explains what the app handles, where that information goes, and how to delete it.</p>
+<h2>The short version</h2>
+<ul>
+<li>There's no sign-up. On first launch the app creates an anonymous ID. We don't ask for your name or phone number.</li>
+<li>To identify the foods, your food photo goes through our server function to Google's AI service (Gemini API, USA). We don't store photos on our servers or in our server logs.</li>
+<li>Your scan photos and results (foods, glucose load, calories) and your height, weight, sex and age range stay on your device.</li>
+<li>Our analytics never receive your glucose load, grade, calories, body info, food names or photos.</li>
+<li>We don't sell your personal information, and we don't use it for advertising.</li>
+<li>Settings → "Delete all my data" erases the data on your device and your anonymous account on our server.</li>
+</ul>
+<h2>1. What we collect</h2>
+<div class="t"><table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Where it's stored</th>
+<th>Sent to (country)</th>
+<th>How long we keep it</th>
+<th>Why, and your choice</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Food photo (resized on your device to 1024 px on the long side, JPEG, with EXIF data including location removed)</td>
+<td>Your device</td>
+<td>Our server function (Supabase; runs in the US East region when you use the US food database, or in Seoul, South Korea, when you use the Korean one), then Google LLC (USA)</td>
+<td>Device: until you delete it · Our servers: not stored (discarded from memory after the response) · Google: see section 2</td>
+<td>To identify the foods. Required for scanning; we ask for your consent before the first scan</td>
+</tr>
+<tr>
+<td>Scan results (foods, portions, glucose load, calories)</td>
+<td>Your device</td>
+<td>Not sent</td>
+<td>Until you delete them</td>
+<td>Processed on your device only; we can't see them</td>
+</tr>
+<tr>
+<td>Height, weight, sex, age range</td>
+<td>Your device</td>
+<td>Not sent</td>
+<td>Until you delete them</td>
+<td>Optional, used only for your calorie target. Skip it and we don't process it</td>
+</tr>
+<tr>
+<td>Anonymous user ID</td>
+<td>Supabase (Seoul)</td>
+<td>RevenueCat (USA), PostHog (USA)</td>
+<td>Until your account is deleted (for RevenueCat and PostHog copies, see section 5)</td>
+<td>To run the app and your subscription</td>
+</tr>
+<tr>
+<td>Subscription info (product, purchase, trial, renewal and cancellation history, store transaction data)</td>
+<td>RevenueCat</td>
+<td>RevenueCat (USA)</td>
+<td>As long as needed to manage the subscription, restore purchases and handle refunds, or until you ask us to delete it</td>
+<td>To provide and verify your subscription</td>
+</tr>
+<tr>
+<td>Daily scan count (anonymous ID, local date, count)</td>
+<td>Supabase (Seoul)</td>
+<td>Not sent</td>
+<td>Deleted automatically after 7 days</td>
+<td>To apply the 30-scans-a-day limit</td>
+</tr>
+<tr>
+<td>Record that your one free scan was used (anonymous ID, time)</td>
+<td>Supabase (Seoul)</td>
+<td>Not sent</td>
+<td>Until your account is deleted</td>
+<td>To give one free scan per user and prevent abuse</td>
+</tr>
+<tr>
+<td>Usage events (screens viewed, taps, scan status and response time, purchase steps, onboarding answers: where you usually eat, how you heard about us, whether you entered body info, and whether you answered the goal and after-meal questions (not what you answered); country, language, platform, app version, device info)</td>
+<td>PostHog</td>
+<td>PostHog (USA)</td>
+<td>Up to 1 year (PostHog's retention for our plan), or until you ask us to delete it</td>
+<td>To understand and improve the app. There is no in-app opt-out; you can ask us to delete these events</td>
+</tr>
+<tr>
+<td>Support requests (type, message, optional reply email, and automatically attached app version, platform, country, food database version, last scan status, anonymous ID)</td>
+<td>Supabase (Seoul)</td>
+<td>Not sent</td>
+<td>Until you delete your data or ask us to</td>
+<td>To answer you. Sent only when you tap Send</td>
+</tr>
+<tr>
+<td>Recognition reports (predicted food IDs, the food or portion you corrected, report type, food database version, model name)</td>
+<td>Supabase (Seoul)</td>
+<td>Not sent</td>
+<td>Until you delete your data</td>
+<td>To fix our food database. Sent only when you tap Send</td>
+</tr>
+<tr>
+<td>Server logs (a hash of your anonymous ID, country, model name, response time, token counts, status; infrastructure access logs with IP address and request time)</td>
+<td>Supabase</td>
+<td>Not sent</td>
+<td>Up to 7 days (Supabase's log retention)</td>
+<td>Security and troubleshooting</td>
+</tr>
+</tbody>
+</table></div>
+<p>Support requests and recognition reports never include photos, glucose load or calories.</p>
+<p>We don't collect your name, phone number, contacts, precise location (photo location data is removed before upload), advertising identifiers (IDFA or Android advertising ID), other photos in your library (the app reads only the photo you pick), or payment card details (Apple and Google handle payment).</p>
+<p>The app uses these permissions:</p>
+<ul>
+<li><strong>Camera:</strong> only while you take a meal photo.</li>
+<li><strong>Photos:</strong> only the photo you choose.</li>
+<li><strong>Notifications:</strong> a reminder the day before your free trial ends. It's scheduled on your device and doesn't go through our servers.</li>
+</ul>
+<h2>2. How food photos are handled</h2>
+<ol>
+<li>On your device, the photo is resized to 1024 px on the long side and its EXIF data, including location, is removed.</li>
+<li>It's sent over HTTPS to our server function, which checks your subscription and daily limit and then passes the photo to the Google Gemini API (paid tier). Your anonymous ID and other identifying information are not sent to Google.</li>
+<li>Google returns only the food names and estimated weights. The app calculates glucose load and calories on your device from its food database.</li>
+<li>Our servers don't store the photo or the raw recognition result, and neither appears in our logs.</li>
+<li>Google processes the photo under its paid Gemini API terms. We use the paid tier. Under those terms, Google doesn't use our requests to improve its products or train its models, and keeps them for 55 days only to detect abuse and meet legal requirements.</li>
+</ol>
+<h2>3. How we use information</h2>
+<ul>
+<li>Identify foods and calculate glucose load and calories (calculated on your device)</li>
+<li>Calculate your calorie target, if you choose to (on your device)</li>
+<li>Provide and verify your subscription, apply the one-free-scan rule and the daily limit, and prevent abuse</li>
+<li>Understand how the app is used (funnel drop-off, error rates, response times) and pause scanning during an outage</li>
+<li>Answer support requests and fix recognition errors in our food database</li>
+<li>Keep the service secure and running</li>
+</ul>
+<p>We don't use your information for advertising or targeted advertising, and we don't sell it.</p>
+<h2>4. Service providers and international transfers</h2>
+<p>We are based in South Korea. If you use the app in the United States, your information is processed in South Korea (our database) and in the United States (our service providers). We use these providers to run the app. Each processes data on our behalf:</p>
+<div class="t"><table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>Country</th>
+<th>Data</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Google LLC (Gemini API)</td>
+<td>USA</td>
+<td>Food photos</td>
+<td>Food recognition</td>
+</tr>
+<tr>
+<td>RevenueCat, Inc.</td>
+<td>USA</td>
+<td>Anonymous ID, subscription and purchase info</td>
+<td>Subscription management, restoring purchases</td>
+</tr>
+<tr>
+<td>PostHog, Inc. (US Cloud)</td>
+<td>USA</td>
+<td>Anonymous ID, usage events, device and app info</td>
+<td>Product analytics, emergency scan shutoff</td>
+</tr>
+<tr>
+<td>Supabase, Inc. (on AWS; database in Seoul, scan function in US East for the US food database)</td>
+<td>South Korea; USA (scan function)</td>
+<td>Anonymous ID, scan counts, free-scan record, support requests, recognition reports, server logs; relays photos without storing them</td>
+<td>Servers and database</td>
+</tr>
+</tbody>
+</table></div>
+<p>Apple (App Store) and Google (Google Play) process your payment through your store account. We never receive your payment card details.</p>
+<h2>5. Retention and deletion</h2>
+<p><strong>Settings → "Delete all my data"</strong> deletes the photos, scan history, body info and settings on your device, and deletes your anonymous account on our server. Deleting the account also deletes your daily scan counts, free-scan record, support requests and recognition reports. The next time you open the app, it creates a new anonymous ID.</p>
+<p>It does not delete:</p>
+<ul>
+<li><strong>Your subscription.</strong> Cancel it separately in the App Store or Google Play (see our Support page).</li>
+<li><strong>RevenueCat's subscription records,</strong> which are kept to manage your subscription, restore purchases and handle refunds. To have them deleted, ask us (section 7) and we'll delete them for you.</li>
+<li><strong>Usage events in PostHog.</strong> Ask us and we'll delete them (section 7).</li>
+<li><strong>Emails you send to admin@tivia.kr.</strong> Ask us and we'll delete them.</li>
+</ul>
+<p>If the server deletion fails, your device data is still erased but server records may remain. Contact us and we'll delete them.</p>
+<p><strong>If you only delete the app,</strong> the data on your device goes with it, but your anonymous account records on our server (free-scan record, support requests, recognition reports) remain. Tap "Delete all my data" before deleting the app. We don't automatically delete inactive anonymous accounts.</p>
+<p><strong>Device backups:</strong> photos, history and body info stored on your device may be included in your iCloud or Google device backup, which keeps your history when you move to a new device. Deleting data in the app doesn't remove copies already in those backups; manage them in your device's backup settings. We can't access these backups.</p>
+<h2>6. Age requirement</h2>
+<p>You must be 18 or older to use Evn AI. The app says so during onboarding, and its age options start at 18. The app is not directed to children, and we don't knowingly collect information from children under 13. If we learn that we have, we'll delete it.</p>
+<h2>7. Your choices and rights</h2>
+<p>Wherever you live in the US, you can ask us to:</p>
+<ul>
+<li>tell you what information we hold about you and give you a copy,</li>
+<li>correct it,</li>
+<li>delete it,</li>
+<li>withdraw a consent you gave (withdrawing photo consent means photos can't be analyzed).</li>
+</ul>
+<p><strong>How to ask:</strong> In the app, go to Settings → "Contact us". Your anonymous ID is attached automatically, which is the only way we can find your server records, since we don't know who you are. You can also email admin@tivia.kr. We'll respond within 45 days. If we need more time where the law allows, we'll tell you why. If we deny your request, you can appeal by replying to our answer, and we'll respond within the time your state's law requires. An authorized agent may make a request for you. We won't treat you differently for using these rights.</p>
+<p><strong>Sale, sharing and targeted advertising:</strong> We don't sell personal information, don't share it for cross-context behavioral advertising, and don't use it for targeted advertising.</p>
+<p><strong>Consumer health data:</strong> Some state laws, such as Washington's My Health My Data Act, protect "consumer health data." Here's how we handle health-related information: body info and scan results stay on your device; food photos are sent only with your consent and are not stored on our servers; analytics events exclude glucose load, calories, body info and food names. Your answers about your goal and how often you feel sleepy or hungry after eating stay on your device; analytics only record that you answered.</p>
+<p><strong>Health breach notification:</strong> If a breach affects your health-related information, we'll notify you and the authorities as the law requires, including under the FTC Health Breach Notification Rule where it applies.</p>
+<h2>8. Security</h2>
+<ul>
+<li>All connections use HTTPS.</li>
+<li>Photos are not stored on our servers, and photos and raw recognition results are kept out of our server logs.</li>
+<li>Photo location data is removed on your device before upload.</li>
+<li>Row-level security is on for our database: the app can only add its own support requests and reports, and only our server can read them.</li>
+<li>API keys and other secrets stay on the server.</li>
+<li>Analytics never receive health-related values, and session replay and autocapture are turned off.</li>
+<li>Access to server data is limited to the people who need it.</li>
+</ul>
+<p>No method of storage or transmission is completely secure, but we work to protect your information.</p>
+<h2>9. Changes to this policy</h2>
+<p>When we change this policy, we'll update the effective date and post the new version here. For significant changes, such as collecting new kinds of data or adding a service provider, we'll also tell you in the app before the change takes effect and ask for your consent again where required.</p>
+<h2>10. Contact</h2>
+<p>TIVIA Inc. · Unit 428A, 2F, 47 Gangnam-daero 112-gil, Gangnam-gu, Seoul, Republic of Korea · admin@tivia.kr · In the app: Settings → "Contact us"</p>
+<p><strong>Change history</strong></p>
+<ul>
+<li>2026-10-04: First version</li>
+</ul>
 </article>
 </main>
 <footer>TIVIA Inc. · <a href="mailto:admin@tivia.kr">admin@tivia.kr</a> · <a href="terms">이용약관 Terms</a> · <a href="privacy">개인정보 처리방침 Privacy</a> · <a href="support">지원 Support</a></footer>

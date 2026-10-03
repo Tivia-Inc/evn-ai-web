@@ -31,14 +31,160 @@ footer a{color:var(--muted)}
 <header><a href="./">Evn AI</a><nav class="lang"><button data-l="ko">한국어</button> <button data-l="en">English</button></nav></header>
 <main>
 <article lang="ko" data-l="ko">
-<h1>지원 · 자주 묻는 질문</h1>
-<p>Evn AI 출시 전에 이 주소에 게시합니다.</p>
-<p class="muted">문의: <a href="mailto:admin@tivia.kr">admin@tivia.kr</a></p>
+<h1>Evn AI 지원 · 자주 묻는 질문</h1>
+<p>문의: 앱 <strong>설정 → 문의하기</strong>(가장 빠릅니다. 앱 버전과 익명 ID가 자동으로 함께 전달됩니다) · 이메일 <strong>admin@tivia.kr</strong>
+영업일 1일 안에 답하는 것을 목표로 합니다.</p>
+<p>이용약관: https://tivia-inc.github.io/evn-ai-web/terms · 개인정보 처리방침: https://tivia-inc.github.io/evn-ai-web/privacy</p>
+<h2>구독과 결제</h2>
+<h3>구독은 어떻게 해지하나요?</h3>
+<p>구독은 스토어에서만 해지할 수 있습니다. Evn AI의 <strong>설정 → 구독 관리</strong>를 누르면 해당 화면이 열립니다.</p>
+<ul>
+<li><strong>iPhone:</strong> 설정 앱 → 맨 위 이름 → 구독 → Evn AI → 구독 취소</li>
+<li><strong>Android:</strong> Google Play 스토어 앱 → 오른쪽 위 프로필 → 결제 및 정기 결제 → 정기 결제 → Evn AI → 정기 결제 취소</li>
+</ul>
+<p>다음 결제를 막으려면 갱신 24시간 전까지 해지하세요. 해지해도 이미 결제한 기간이 끝날 때까지는 계속 쓸 수 있습니다. 앱을 지우거나 "내 데이터 모두 지우기"를 해도 구독은 해지되지 않습니다.</p>
+<h3>무료 체험 중에 해지하면 요금이 나가나요?</h3>
+<p>체험이 끝나기 24시간 전까지 해지하면 요금이 청구되지 않습니다. 알림을 허용하셨다면 결제 하루 전에 알려 드립니다. iPhone에서는 체험 중에 해지하면 체험이 바로 끝날 수 있습니다.</p>
+<h3>요금은 얼마인가요?</h3>
+<p>한국 스토어 기준으로 연간 플랜은 3일 무료 체험 뒤 연 39,000원, 월간 플랜은 월 9,900원입니다. 결제 화면과 스토어 결제창에 표시된 금액이 기준입니다. 무료 체험은 처음 구독하는 분에게만 제공됩니다.</p>
+<h3>무엇이 무료이고 무엇이 유료인가요?</h3>
+<p>첫 스캔 한 번은 무료이며 칼로리를 보여 드립니다. 그 스캔의 혈당 부하 결과와 두 번째 스캔부터는 구독이 필요합니다. 구독 중에는 하루 30회까지 스캔할 수 있고, 현지 시간 자정에 초기화됩니다. 음식을 찾지 못했거나 오류가 난 스캔은 횟수에서 빠지지 않습니다.</p>
+<h3>환불은 어떻게 받나요?</h3>
+<ul>
+<li><strong>iPhone:</strong> Apple이 처리합니다. reportaproblem.apple.com에 로그인해 Evn AI 구매를 고르고 환불을 요청하세요.</li>
+<li><strong>Android:</strong> Google Play 환불 정책에 따라 Google Play에서 요청할 수 있습니다. Google Play 결제는 회사가 확인한 뒤 환불할 수도 있으니, 앱의 문의하기에서 "결제·구독"을 골라 알려 주세요.</li>
+</ul>
+<h3>앱을 다시 깔았거나 데이터를 지웠어요. 구독을 되살리려면?</h3>
+<ol>
+<li>구독할 때 쓴 Apple 계정(또는 Google 계정)으로 기기에 로그인돼 있는지 확인합니다.</li>
+<li>Evn AI를 열고 <strong>설정 → 구매 복원</strong>을 누릅니다. 페이월 아래의 "구매 복원"도 같습니다.</li>
+<li>"구독을 되살렸어요"가 뜨면 끝입니다. "되살릴 구독이 없어요"가 뜨면 구독한 스토어 계정이 맞는지 확인해 주세요.</li>
+</ol>
+<p>스캔 사진과 기록은 기기에만 저장되므로, 앱을 지우거나 데이터를 지운 뒤에는 되살릴 수 없습니다. 되살아나는 것은 구독뿐입니다. iPhone에서 산 구독은 Android에서, Android에서 산 구독은 iPhone에서 쓸 수 없습니다.</p>
+<h2>혈당 부하 숫자</h2>
+<h3>숫자는 어떻게 계산하나요?</h3>
+<ol>
+<li>AI가 사진에서 음식 이름과 대략의 양(그램)을 알아봅니다. AI는 칼로리나 혈당 부하 같은 숫자를 계산하지 않습니다.</li>
+<li>앱이 음식마다 음식 DB에서 가용 탄수화물(식이섬유를 뺀 탄수화물) 양과 혈당지수(GI)를 찾습니다. 한국은 식품의약품안전처 식품영양성분 DB, 미국은 USDA FoodData Central을 쓰고, GI는 공개된 국제 GI 자료를 씁니다.</li>
+<li>음식별 혈당 부하는 <strong>GI × 가용 탄수화물(g) ÷ 100</strong>이고, 식사의 혈당 부하는 음식별 값을 더한 것입니다.</li>
+<li>등급은 식사 기준으로 25 이하 낮음, 26~40 보통, 41 이상 높음입니다. 간식·음료는 10 이하 낮음, 11~19 보통, 20 이상 높음입니다.</li>
+<li>칼로리는 같은 DB의 값에 양을 곱해 계산합니다.</li>
+</ol>
+<p>계산은 모두 기기 안에서 합니다. 같은 음식과 같은 양이면 항상 같은 숫자가 나옵니다.</p>
+<p>칼로리 목표(선택)는 키·몸무게·성별·나이대로 기초대사량(Mifflin-St Jeor 식)을 구하고 활동량을 곱해 정합니다. 목표가 "살 빼기"이면 400kcal를 빼고, 너무 낮아지지 않도록 하한선을 둡니다. 신체 정보를 건너뛰면 2,000kcal를 씁니다.</p>
+<h3>혈당 부하는 내 혈당 수치인가요?</h3>
+<p>아닙니다. 혈당 부하는 음식의 탄수화물 양과 종류로 계산한 그 식사의 추정치입니다. 내 몸의 혈당을 재거나 예상하지 않습니다. 같은 식사라도 사람마다, 먹는 순서, 함께 먹은 음식, 활동량에 따라 실제 반응이 다릅니다.</p>
+<p>혈당 부하 점수는 음식의 탄수화물 양과 종류로 계산한 추정치이며, 개인의 실제 혈당 반응과 다를 수 있습니다. 이 앱은 의료기기가 아니며 질병의 진단·치료·예방 목적으로 사용할 수 없습니다.</p>
+<h3>결과가 틀릴 수 있나요?</h3>
+<p>틀릴 수 있습니다. 주로 이런 경우입니다.</p>
+<ul>
+<li>사진만으로는 양을 정확히 알기 어렵습니다(그릇 크기, 겹쳐 놓인 음식, 국물 속 면이나 떡).</li>
+<li>비슷하게 생긴 음식을 헷갈릴 수 있습니다(예: 흰쌀밥과 잡곡밥).</li>
+<li>음식 DB에 없는 음식은 "계산에서 빠졌어요"로 표시되고 합계에 들어가지 않습니다.</li>
+<li>찌개나 전골처럼 함께 먹는 그릇은 몇 명이 나눠 먹는지에 따라 값이 크게 달라집니다.</li>
+<li>GI는 같은 음식이라도 품종과 조리법에 따라 다릅니다. 앱은 대표값을 씁니다.</li>
+</ul>
+<h3>틀린 결과는 어떻게 고치나요?</h3>
+<ul>
+<li>결과 화면에서 <strong>고치기</strong>를 누르면 다른 음식으로 바꾸기, 양 바꾸기, 음식 추가, 빼기를 할 수 있습니다. 고치면 바로 다시 계산합니다.</li>
+<li>음식을 알아보지 못했다면 <strong>직접 고르기</strong>로 이름을 검색해 고를 수 있습니다.</li>
+<li>다시 찍을 때는 상 전체가 보이게, 위에서 비스듬히, 수저처럼 크기를 가늠할 수 있는 물건과 함께 찍으면 더 잘 알아봅니다.</li>
+</ul>
+<h3>틀린 결과를 알리고 싶어요</h3>
+<p>결과 화면에서 <strong>결과가 틀렸어요</strong>를 누르고 유형(음식이 틀려요 / 양이 틀려요 / 목록에 없는 음식이에요 / 기타)을 고른 뒤 보내기를 누르세요. 사진은 보내지 않고, 앱이 알아본 음식 목록과 고친 내용만 보냅니다. 받은 신고는 모아서 음식 DB를 고치는 데 씁니다.</p>
+<h2>스캔이 안 될 때</h2>
+<ul>
+<li><strong>"음식을 찾지 못했어요":</strong> 음식이 화면 가운데에 잘 보이게 다시 찍어 주세요. 이 스캔은 횟수에서 빠지지 않습니다.</li>
+<li><strong>"잠시 문제가 생겼어요":</strong> 잠시 뒤 다시 시도해 주세요. 이 스캔도 횟수에서 빠지지 않습니다.</li>
+<li><strong>카메라가 켜지지 않아요:</strong> 기기 설정 → Evn AI에서 카메라 권한을 켜 주세요.</li>
+</ul>
+<h2>개인정보</h2>
+<h3>사진은 어디로 가나요?</h3>
+<p>음식을 알아보기 위해 회사의 서버 함수를 거쳐 Google의 AI 서비스(미국)로 전송됩니다. 보내기 전에 기기에서 위치 정보를 지우고, Evn AI 서버에는 사진을 저장하지 않습니다. 찍은 사진과 결과는 기기에만 남습니다. 자세한 내용은 개인정보 처리방침을 참고하세요.</p>
+<h3>내 데이터를 지우려면?</h3>
+<p><strong>설정 → 내 데이터 모두 지우기</strong>를 누르면 기기의 사진·기록·신체 정보와 서버의 익명 계정(스캔 횟수, 문의, 신고 포함)이 지워집니다. 구독은 그대로 남으니 해지는 스토어에서 따로 해 주세요. 다시 쓰려면 구매 복원을 누르면 됩니다.</p>
+<h2>이용 대상</h2>
+<p>Evn AI는 만 18세 이상만 이용할 수 있습니다.</p>
+<h2>그래도 해결되지 않으면</h2>
+<p>앱의 <strong>설정 → 문의하기</strong>에서 유형(결제·구독 / 인식 오류 / 기타)을 고르고 내용을 적어 주세요. 답장 받을 이메일은 선택입니다. 이메일 <strong>admin@tivia.kr</strong>로 보내실 때는 기기 종류(iPhone/Android), 앱 버전, 결제 문제라면 스토어 영수증의 주문 번호를 함께 적어 주세요.</p>
 </article>
 <article lang="en" data-l="en">
-<h1>Support & FAQ</h1>
-<p>This page will be published here before Evn AI launches.</p>
-<p class="muted">Contact: <a href="mailto:admin@tivia.kr">admin@tivia.kr</a></p>
+<h1>Evn AI Support and FAQ</h1>
+<p>Contact: in the app, <strong>Settings → Contact us</strong> (fastest: your app version and anonymous ID are attached automatically) · Email <strong>admin@tivia.kr</strong>
+We aim to reply within 1 business day.</p>
+<p>Terms of Use: https://tivia-inc.github.io/evn-ai-web/terms · Privacy Policy: https://tivia-inc.github.io/evn-ai-web/privacy</p>
+<h2>Subscription and billing</h2>
+<h3>How do I cancel?</h3>
+<p>You can only cancel through your app store. In Evn AI, <strong>Settings → Manage subscription</strong> opens the right screen.</p>
+<ul>
+<li><strong>iPhone:</strong> Settings app → your name → Subscriptions → Evn AI → Cancel Subscription</li>
+<li><strong>Android:</strong> Google Play Store app → profile icon (top right) → Payments &amp; subscriptions → Subscriptions → Evn AI → Cancel subscription</li>
+</ul>
+<p>Cancel at least 24 hours before your renewal date to avoid the next charge. You keep access until the end of the period you've paid for. Deleting the app or using "Delete all my data" does not cancel your subscription.</p>
+<h3>Will I be charged if I cancel during the free trial?</h3>
+<p>No, as long as you cancel at least 24 hours before the trial ends. If you allowed notifications, we remind you the day before you're billed. On iPhone, canceling during the trial may end the trial right away.</p>
+<h3>How much does it cost?</h3>
+<p>In the US, the yearly plan is $59.99 a year after a 3-day free trial, and the monthly plan is $12.99 a month. The price shown on the paywall and in the store's purchase sheet is what you pay. The free trial is for new subscribers only.</p>
+<h3>What's free and what needs a subscription?</h3>
+<p>Your first scan is free and shows the calories. Seeing that scan's glucose load and scanning again need a subscription. Subscribers can scan up to 30 times a day; the count resets at midnight local time. Scans that find no food or end in an error don't count.</p>
+<h3>How do I get a refund?</h3>
+<ul>
+<li><strong>iPhone:</strong> Apple handles refunds. Sign in at reportaproblem.apple.com, choose the Evn AI purchase and request a refund.</li>
+<li><strong>Android:</strong> Request a refund through Google Play under its refund policy. We can also refund some Google Play purchases ourselves, so contact us in the app and choose "Billing &amp; subscription."</li>
+</ul>
+<h3>I reinstalled the app or deleted my data. How do I get my subscription back?</h3>
+<ol>
+<li>Make sure your device is signed in to the Apple Account (or Google account) you subscribed with.</li>
+<li>Open Evn AI and tap <strong>Settings → Restore purchases</strong>. "Restore purchases" under the paywall works too.</li>
+<li>If you see "Your subscription is restored," you're done. If you see "There's no subscription to restore," check that you're signed in to the store account you subscribed with.</li>
+</ol>
+<p>Scan photos and history live only on your device, so they can't be recovered after you delete the app or your data. Only the subscription comes back. A subscription bought on iPhone can't be used on Android, and vice versa.</p>
+<h2>The glucose load number</h2>
+<h3>How is the number calculated?</h3>
+<ol>
+<li>AI looks at your photo and identifies the foods and their approximate weight in grams. The AI doesn't calculate calories or glucose load.</li>
+<li>For each food, the app looks up the available carbohydrates (carbs minus fiber) and the glycemic index (GI) in its food database: USDA FoodData Central in the US, Korea's MFDS Food Nutrient Database in Korea, and published international GI tables.</li>
+<li>Each food's glucose load is <strong>GI × available carbs (g) ÷ 100</strong>. The meal's glucose load is the sum of its foods.</li>
+<li>Grades for a meal: 25 or less is Low, 26–40 is Medium, 41 or more is High. For snacks and drinks: 10 or less is Low, 11–19 is Medium, 20 or more is High.</li>
+<li>Calories come from the same database, multiplied by the portion.</li>
+</ol>
+<p>All of this is calculated on your phone. The same foods in the same amounts always give the same numbers.</p>
+<p>The optional calorie target uses your height, weight, sex and age range to estimate your resting energy (Mifflin-St Jeor equation), multiplied by an activity factor. If your goal is losing weight, it subtracts 400 kcal, with a minimum so the target never gets too low. If you skip body info, it uses 2,000 kcal.</p>
+<h3>Is glucose load my blood sugar?</h3>
+<p>No. Glucose load is an estimate for the meal, based on the type and amount of carbs in the food. The app doesn't measure or forecast your blood sugar. The same meal affects different people differently, and things like eating order, what you eat with it and activity matter too.</p>
+<p>The glucose load score is an estimate based on the type and amount of carbohydrates and may differ from your actual blood sugar response. This app is not a medical device and is not intended to diagnose, treat, or prevent any disease.</p>
+<h3>Can a result be wrong?</h3>
+<p>Yes. The most common reasons:</p>
+<ul>
+<li>Portions are hard to judge from a photo (bowl size, stacked foods, noodles hidden in soup).</li>
+<li>Similar-looking foods can be mixed up (for example, white rice and brown rice).</li>
+<li>Foods that aren't in the database show as "weren't counted" and are left out of the total.</li>
+<li>For shared dishes, the number depends a lot on how many people are sharing.</li>
+<li>GI varies with variety and cooking method. The app uses a typical value.</li>
+</ul>
+<h3>How do I fix a wrong result?</h3>
+<ul>
+<li>On the result screen, tap <strong>Fix</strong> to change a food, change the amount, add a food or remove one. The numbers update right away.</li>
+<li>If a food wasn't recognized, tap <strong>Pick it myself</strong> and search for it by name.</li>
+<li>When you retake the photo, get the whole table in the shot from a slight angle above, with something like a spoon or chopsticks for scale.</li>
+</ul>
+<h3>How do I report a wrong result?</h3>
+<p>On the result screen, tap <strong>This looks wrong</strong>, pick what's wrong (Wrong food / Wrong amount / Food isn't in the list / Something else) and tap Send. We don't send your photo, only the list of recognized foods and your correction. We use reports to fix the food database.</p>
+<h2>When a scan doesn't work</h2>
+<ul>
+<li><strong>"We couldn't find any food":</strong> Retake the photo with the food clearly in view. This scan doesn't count.</li>
+<li><strong>"Something went wrong":</strong> Try again in a moment. This scan doesn't count either.</li>
+<li><strong>The camera won't open:</strong> Go to your phone's Settings → Evn AI and turn on camera access.</li>
+</ul>
+<h2>Privacy</h2>
+<h3>Where do my photos go?</h3>
+<p>To identify the foods, your photo goes through our server function to Google's AI service (USA). Location data is removed on your device first, and the photo is not stored on Evn AI's servers. Your photos and results stay on your device. See the Privacy Policy for details.</p>
+<h3>How do I delete my data?</h3>
+<p>Tap <strong>Settings → Delete all my data</strong>. This erases the photos, history and body info on your device and your anonymous account on our server, including scan counts, support messages and reports. Your subscription stays, so cancel it in your store if you want to. To use it again, tap Restore purchases.</p>
+<h2>Who can use Evn AI</h2>
+<p>You must be 18 or older to use Evn AI.</p>
+<h2>Still need help?</h2>
+<p>In the app, go to <strong>Settings → Contact us</strong>, pick a topic (Billing &amp; subscription / Recognition problem / Other) and tell us what happened. A reply email is optional. If you email <strong>admin@tivia.kr</strong>, include your device (iPhone or Android), app version and, for billing questions, the order ID from your store receipt.</p>
 </article>
 </main>
 <footer>TIVIA Inc. · <a href="mailto:admin@tivia.kr">admin@tivia.kr</a> · <a href="terms">이용약관 Terms</a> · <a href="privacy">개인정보 처리방침 Privacy</a> · <a href="support">지원 Support</a></footer>
