@@ -5,6 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>Evn AI</title>
+<meta name="description" content="Snap your plate and see its glucose load. No food rules, just a little curiosity.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Evn AI">
+<meta property="og:title" content="Evn AI">
+<meta property="og:description" content="Snap your plate and see its glucose load. No food rules, just a little curiosity.">
+<meta property="og:image" content="https://tivia-inc.github.io/evn-ai-web/go/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://tivia-inc.github.io/evn-ai-web/go/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Evn AI">
+<meta name="twitter:description" content="Snap your plate and see its glucose load. No food rules, just a little curiosity.">
+<meta name="twitter:image" content="https://tivia-inc.github.io/evn-ai-web/go/og.png">
 <link rel="icon" href="../icon.png">
 <link rel="apple-touch-icon" href="../icon.png">
 <style>
@@ -29,7 +42,7 @@ small{display:block;color:var(--sub);margin-top:22px;font-size:13px}
 <small>Glucose load (GL) is an estimate per serving, based on the type and amount of carbs. Not medical advice.</small>
 </main>
 <script>
-// 순수 함수: tool/build_go_page.py의 시험이 같은 함수를 node로 돌린다
+// 순수 함수: marketing/_tools/build_go_page.py의 시험이 같은 함수를 node로 돌린다
 function evnDest(ua, rawTag) {
   var tag = String(rawTag || "bio").toLowerCase().replace(/[^a-z0-9_]/g, "").slice(0, 30) || "bio";
   var ios = "https://apps.apple.com/app/apple-store/id6818814742?pt=127993018&ct=" + tag + "&mt=8";
