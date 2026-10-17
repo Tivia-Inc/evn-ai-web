@@ -44,7 +44,7 @@ footer a{color:var(--muted)}
 <li>음식 사진은 음식을 알아보기 위해 회사의 서버 함수를 거쳐 Google의 AI 서비스(Gemini API, 미국)나 Anthropic의 AI 서비스(Claude API, 미국)로 전송됩니다. 회사 서버에는 사진을 저장하지 않고, 서버 기록(로그)에도 남기지 않습니다.</li>
 <li>스캔 사진과 결과(음식, 혈당 부하, 칼로리), 이용자가 넣은 이름·키·몸무게(기록한 몸무게 포함)·성별·출생연도, 하루 목표, 배지, 알림 설정은 이용자의 기기에만 저장됩니다.</li>
 <li>이용 통계 도구에는 혈당 부하·등급·칼로리·신체 정보·음식 이름·사진을 보내지 않습니다.</li>
-<li>개인정보를 판매하지 않고, 광고에 쓰지 않습니다.</li>
+<li>개인정보를 판매하지 않습니다. 광고 성과를 재기 위해 메타에 앱 설치·실행과 체험 시작 사실만 보내고, 건강·음식·신체 정보와 사진은 보내지 않습니다(4조 4-2).</li>
 <li>프로필 탭의 "내 데이터 모두 지우기"로 기기 데이터와 서버의 익명 계정을 함께 지울 수 있습니다.</li>
 </ul>
 <h2>1. 처리하는 정보</h2>
@@ -179,9 +179,10 @@ footer a{color:var(--muted)}
 <li>문의 답변, 인식 오류를 고치기 위한 음식 DB 수정</li>
 <li>보안 유지와 장애 대응</li>
 </ul>
-<p>회사는 이 정보를 광고나 맞춤형 광고에 쓰지 않고, 판매하지 않습니다.</p>
-<h2>4. 처리 위탁과 국외 이전</h2>
-<p>회사는 개인정보를 제3자에게 판매하거나 제공하지 않습니다. 서비스 운영을 위해 아래 업체에 처리를 맡기며, 일부는 국외에서 처리됩니다.</p>
+<p>회사는 이 정보를 판매하지 않습니다. 4조 4-2의 광고 성과 측정 정보 말고는 광고에 쓰지 않으며, 건강·음식·혈당 부하·칼로리·신체 정보와 사진은 어떤 광고에도 쓰지 않습니다.</p>
+<h2>4. 처리 위탁·제공과 국외 이전</h2>
+<p>회사는 개인정보를 판매하지 않습니다. 서비스 운영을 위해 아래 업체에 처리를 맡기며(4-1), 일부는 국외에서 처리됩니다. 광고 성과 측정을 위해 메타에 일부 정보를 제공합니다(4-2).</p>
+<h3>4-1. 처리 위탁</h3>
 <div class="t"><table>
 <thead>
 <tr>
@@ -213,8 +214,8 @@ footer a{color:var(--muted)}
 <tr>
 <td>RevenueCat, Inc.</td>
 <td>미국</td>
-<td>익명 ID, 구독·구매 정보, 앱을 알게 된 경로 답, 결제 화면에 보인 플랜 구성</td>
-<td>구독 관리, 구매 복원, 어떤 플랜·유입 경로에서 구독하는지 분석</td>
+<td>익명 ID, 구독·구매 정보, 앱을 알게 된 경로 답, 결제 화면에 보인 플랜 구성, 메타 익명 ID·기기 식별자(iOS IDFV)·IP 주소</td>
+<td>구독 관리, 구매 복원, 어떤 플랜·유입 경로에서 구독하는지 분석, 구독 이벤트를 메타에 보내는 광고 성과 측정(4-2)</td>
 <td>앱 실행·구매·복원 때 HTTPS로 전송</td>
 <td>구독 관리 기간 또는 삭제 요청 때까지</td>
 </tr>
@@ -241,6 +242,35 @@ footer a{color:var(--muted)}
 <li>결제는 이용자가 구독한 앱 스토어가 이용자의 스토어 계정으로 직접 처리합니다. 회사는 결제 수단 정보를 받지 않습니다.</li>
 <li>사진 국외 전송에는 동의하지 않을 수 있습니다. 동의하지 않으면 사진 분석을 쓸 수 없습니다.</li>
 <li>RevenueCat·PostHog로의 전송은 구독 제공과 서비스 운영에 필요합니다. 원하지 않으면 앱 사용을 멈추고 6조의 방법으로 삭제를 요청할 수 있습니다. 이용 통계 수집을 끄는 설정은 따로 없습니다.</li>
+</ul>
+<h3>4-2. 광고 성과 측정(메타)</h3>
+<p>회사는 광고에서 설치·체험·구독이 생겼는지 재기 위해 아래 정보를 메타에 제공합니다. 메타는 이 정보를 메타 광고의 성과 측정과 광고 전달 최적화에 쓸 수 있습니다.</p>
+<div class="t"><table>
+<thead>
+<tr>
+<th>받는 자</th>
+<th>국가</th>
+<th>항목</th>
+<th>목적</th>
+<th>시기·방법</th>
+<th>보관 기간</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Meta Platforms, Inc.</td>
+<td>미국</td>
+<td>앱 설치·실행, 체험 시작(상품 ID·통화, 금액 0), 메타 익명 ID, 기기 식별자(iOS IDFV), IP 주소, 기기·앱 정보. RevenueCat이 보내는 구독 이벤트(체험 시작·구매·갱신·해지)와 같은 식별자</td>
+<td>광고 성과 측정, 메타의 광고 전달 최적화</td>
+<td>앱 실행·체험 시작 때 메타 SDK가, 구독 이벤트는 RevenueCat 서버가 HTTPS로 전송</td>
+<td>메타 데이터 정책에 따름</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>건강·음식·혈당 부하·칼로리·신체 정보, 사진, 기록, 온보딩 답은 보내지 않습니다. 기기의 광고 식별자(IDFA·광고 ID)는 받지 않고 추적 허용 요청도 하지 않습니다.</li>
+<li>메타 개인정보 처리방침: https://www.facebook.com/privacy/policy</li>
+<li>원하지 않으면 앱 사용을 멈추고 6조의 방법으로 요청해 주세요. 회사가 메타와 RevenueCat에 그 기록의 삭제를 요청합니다.</li>
 </ul>
 <h2>5. 보관 기간과 파기</h2>
 <p><strong>프로필 탭의 "내 데이터 모두 지우기"를 누르면</strong> 기기의 사진·스캔 기록·신체 정보·몸무게 기록·목표·설정을 지우고 예약된 식사 알림을 취소하며, 서버의 익명 계정을 삭제합니다. 계정을 지우면 하루 스캔 횟수, 무료 첫 스캔 기록, 문의, 인식 오류 신고가 함께 지워집니다. 다음에 앱을 열면 새 익명 ID가 만들어집니다.</p>
@@ -277,7 +307,7 @@ footer a{color:var(--muted)}
 <li>서버 데이터에 접근할 수 있는 사람을 최소한으로 둡니다.</li>
 </ul>
 <h2>9. 자동 수집 장치</h2>
-<p>앱은 쿠키를 쓰지 않습니다. PostHog SDK가 1조의 이용 통계 이벤트를 보냅니다. 광고 식별자를 쓰지 않고, 행태정보로 맞춤형 광고를 하지 않습니다. PostHog에는 접속 IP를 저장하지 않도록 설정했습니다.</p>
+<p>앱은 쿠키를 쓰지 않습니다. PostHog SDK가 1조의 이용 통계 이벤트를, 메타 SDK가 앱 설치·실행과 체험 시작 이벤트를 보냅니다(4조 4-2). 기기의 광고 식별자(IDFA·광고 ID)는 쓰지 않고 추적 허용 요청도 하지 않습니다. 메타는 받은 정보를 메타 광고의 성과 측정과 전달 최적화에 쓸 수 있습니다. 회사는 앱 안에서 다른 회사의 광고를 보여 주지 않습니다. PostHog에는 접속 IP를 저장하지 않도록 설정했습니다.</p>
 <h2>10. 개인정보 보호책임자와 권익 침해 구제</h2>
 <ul>
 <li>개인정보 보호책임자: 이태희(대표이사) · admin@tivia.kr</li>
@@ -308,7 +338,7 @@ footer a{color:var(--muted)}
 <li>To identify the foods, your food photo goes through our server function to Google's AI service (Gemini API, USA) or Anthropic's AI service (Claude API, USA). We don't store photos on our servers or in our server logs.</li>
 <li>Your scan photos and results (foods, glucose load, calories), the personal details you choose to add (name, height, weight and the weights you log, sex, birth year), your goals, badges and reminder settings stay on your device.</li>
 <li>Our analytics never receive your glucose load, grade, calories, body info, food names or photos.</li>
-<li>We don't sell your personal information, and we don't use it for advertising.</li>
+<li>We don't sell your personal information. To measure our ads, we send Meta only that the app was installed or opened and that a free trial started. We never send health, food or body information, or photos (section 4).</li>
 <li>"Delete all my data" in the Profile tab erases the data on your device and your anonymous account on our server.</li>
 </ul>
 <h2>1. What we collect</h2>
@@ -443,7 +473,7 @@ footer a{color:var(--muted)}
 <li>Answer support requests and fix recognition errors in our food database</li>
 <li>Keep the service secure and running</li>
 </ul>
-<p>We don't use your information for advertising or targeted advertising, and we don't sell it.</p>
+<p>We don't sell your information. Apart from the ad-measurement data in section 4 (Meta), we don't use it for advertising, and we never use health, food, glucose load, calorie or body information, or photos, for any advertising.</p>
 <h2>4. Service providers and international transfers</h2>
 <p>We are based in South Korea. If you use the app in the United States, your information is processed in South Korea (our database) and in the United States (our service providers). We use these providers to run the app. Each processes data on our behalf:</p>
 <div class="t"><table>
@@ -488,6 +518,8 @@ footer a{color:var(--muted)}
 </tr>
 </tbody>
 </table></div>
+<p>RevenueCat also sends subscription events (trial start, purchase, renewal, cancellation) with your Meta anonymous ID, device identifier (iOS IDFV) and IP address to Meta for ad measurement (below).</p>
+<p><strong>Ad measurement (Meta):</strong> To see whether our ads lead to installs, trials and subscriptions, we share limited data with Meta Platforms, Inc. (USA): that the app was installed or opened, that a free trial started (product ID and currency, amount 0), your Meta anonymous ID, device identifier (iOS IDFV), IP address and basic device and app info, sent by the Meta SDK in the app and by RevenueCat's server for subscription events. Meta may use this to measure and optimize delivery of Meta ads, under its own policy (https://www.facebook.com/privacy/policy). We never send health, food or body information, photos, your history or onboarding answers. We don't access your device's advertising identifier and don't ask for tracking permission.</p>
 <p>The app store you subscribe through processes your payment with your store account. We never receive your payment card details.</p>
 <h2>5. Retention and deletion</h2>
 <p><strong>"Delete all my data" in the Profile tab</strong> deletes the photos, scan history, body info, weight log, goals and settings on your device, cancels scheduled meal reminders, and deletes your anonymous account on our server. Deleting the account also deletes your daily scan counts, free-scan record, support requests and recognition reports. The next time you open the app, it creates a new anonymous ID.</p>
@@ -512,7 +544,7 @@ footer a{color:var(--muted)}
 <li>withdraw a consent you gave (withdrawing photo consent means photos can't be analyzed).</li>
 </ul>
 <p><strong>How to ask:</strong> In the app, go to the Profile tab → "Contact us". Your anonymous ID is attached automatically, which is the only way we can find your server records, since we don't know who you are. You can also email admin@tivia.kr. We'll respond within 45 days. If we need more time where the law allows, we'll tell you why. If we deny your request, you can appeal by replying to our answer, and we'll respond within the time your state's law requires. An authorized agent may make a request for you. We won't treat you differently for using these rights.</p>
-<p><strong>Sale, sharing and targeted advertising:</strong> We don't sell personal information, don't share it for cross-context behavioral advertising, and don't use it for targeted advertising.</p>
+<p><strong>Sale, sharing and targeted advertising:</strong> We don't sell personal information, and we don't show other companies' ads in the app. We share the limited ad-measurement data described in section 4 with Meta; under some US state privacy laws this may count as "sharing" for cross-context behavioral advertising. To have that data deleted, contact us (section 10) and we'll ask Meta and RevenueCat to delete it.</p>
 <p><strong>Consumer health data:</strong> Some state laws, such as Washington's My Health My Data Act, protect "consumer health data." Here's how we handle health-related information: body info and scan results stay on your device; food photos are sent only with your consent and are not stored on our servers; analytics events exclude glucose load, calories, body info and food names. Your weight entries and BMI stay on your device. Your answers about what you're hoping for (for example, aging gracefully or steady energy) and how often you feel sleepy or hungry after eating stay on your device; analytics only record that you answered and how many things you picked.</p>
 <p><strong>Health breach notification:</strong> If a breach affects your health-related information, we'll notify you and the authorities as the law requires, including under the FTC Health Breach Notification Rule where it applies.</p>
 <h2>8. Security</h2>
