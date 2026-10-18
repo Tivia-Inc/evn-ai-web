@@ -207,6 +207,7 @@ footer p + p { margin-top: 6px; }
 .who img { width: 100%; aspect-ratio: 4 / 5; height: auto; object-fit: cover; }
 .who figcaption { padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 4px; flex: 1; }
 .who b { font-size: 17px; }
+.who b .nim { font-size: 13px; font-weight: 600; color: var(--muted); }
 .who figcaption > span { font-size: 14px; line-height: 1.5; color: var(--muted); margin-bottom: 10px; }
 .who em { font-style: normal; font-size: 13px; font-weight: 700; margin-top: auto; background: var(--cream); color: var(--ink); border-radius: 999px; padding: 4px 10px; width: fit-content; }
 @media (min-width: 860px) { .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; } }
