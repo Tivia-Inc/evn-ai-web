@@ -1,60 +1,228 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="facebook-domain-verification" content="ib5fnw521npcv6oxzgu9buwyvzkegu" />
-<title>Evn AI</title>
-<link rel="icon" href="icon.png">
-<link rel="apple-touch-icon" href="icon.png">
-<style>
-:root{--bg:#fff;--fg:#141a26;--muted:#5b6475;--line:#e3e6ec;--accent:#141a26;color-scheme:light}
-@media (prefers-color-scheme:dark){:root{--bg:#0f1218;--fg:#e9ecf2;--muted:#9aa3b2;--line:#2a303b;--accent:#e9ecf2;color-scheme:dark}}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Segoe UI",Roboto,sans-serif;word-break:keep-all;overflow-wrap:anywhere}
-header,main,footer{max-width:760px;margin:0 auto;padding:0 16px}
-header{display:flex;align-items:center;justify-content:space-between;padding-top:20px;padding-bottom:12px;border-bottom:1px solid var(--line)}
-header a{color:var(--fg);font-weight:700;text-decoration:none}
-.brand{display:flex;align-items:center;gap:9px;font-size:18px}
-.brand img{border-radius:22%}
-.lang button{font:inherit;font-size:14px;border:1px solid var(--line);background:none;color:var(--muted);border-radius:999px;padding:4px 12px;cursor:pointer}
-.lang button[aria-pressed=true]{color:var(--bg);background:var(--accent);border-color:var(--accent)}
-main{padding-top:8px;padding-bottom:40px}
-h1{font-size:28px;line-height:1.3;margin:24px 0 8px}
-h2{font-size:20px;margin:32px 0 8px}
-h3{font-size:17px;margin:24px 0 6px}
-a{color:inherit}
-.t{overflow-x:auto;margin:12px 0}
-table{border-collapse:collapse;font-size:14px;min-width:560px}
-th,td{border:1px solid var(--line);padding:8px;vertical-align:top;text-align:left}
-footer{border-top:1px solid var(--line);padding-top:16px;padding-bottom:32px;color:var(--muted);font-size:14px}
-footer a{color:var(--muted)}
-.muted{color:var(--muted)}
-</style>
+<title>Evn AI — Your lighter days start at breakfast</title>
+<meta name="description" content="Snap your plate and see its glucose load and calories in seconds. Croissant, matcha, the 3pm cookie, all of it. No food rules.">
+<link rel="canonical" href="https://evnai.app/">
+<link rel="alternate" hreflang="en" href="https://evnai.app/">
+<link rel="alternate" hreflang="ko" href="https://evnai.app/ko/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://evnai.app/">
+<meta property="og:title" content="Evn AI — Your lighter days start at breakfast">
+<meta property="og:description" content="Snap your plate and see its glucose load and calories in seconds. No food rules.">
+<meta property="og:image" content="https://evnai.app/assets/hero_en.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="apple-itunes-app" content="app-id=6818814742">
+<link rel="icon" href="/assets/icon.png">
+<link rel="apple-touch-icon" href="/assets/icon.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
-<header><a class="brand" href="./"><img src="icon.png" alt="" width="28" height="28">Evn AI</a><nav class="lang"><button data-l="ko">한국어</button> <button data-l="en">English</button></nav></header>
+<header class="wrap top">
+  <a class="brand" href="/"><img src="/assets/icon.png" alt="">Evn AI</a>
+  <nav class="lang" aria-label="Language"><a href="/" aria-current="page" hreflang="en">EN</a><a href="/ko/" hreflang="ko">한국어</a></nav>
+</header>
+
 <main>
-<article lang="ko" data-l="ko">
-<h1>Evn AI</h1>
-<ul><li><a href="terms">이용약관</a></li><li><a href="privacy">개인정보 처리방침</a></li><li><a href="support">지원 · 자주 묻는 질문</a></li></ul>
-</article>
-<article lang="en" data-l="en">
-<h1>Evn AI</h1>
-<ul><li><a href="terms">Terms of Use</a></li><li><a href="privacy">Privacy Policy</a></li><li><a href="support">Support & FAQ</a></li></ul>
-</article>
+  <!-- 0 첫 화면 영상(PO 10/18 "아름다움을 위한 한 끼 영상을 맨 위로 히어로 영역처럼"): 넓은 화면 21:9 헤더 영상, 휴대폰 3:2 검색 결과 영상 -->
+  <div class="wrap top-reel">
+    <div class="reel wide"><video autoplay muted loop playsinline preload="metadata" poster="/assets/hero_en.jpg" aria-label="A phone snaps avocado toast and shows its glucose load"><source src="/assets/hero_en.mp4" type="video/mp4"></video><img src="/assets/hero_en.jpg" alt="A phone over avocado toast showing glucose load 34, Medium"></div>
+    <div class="reel narrow"><video autoplay muted loop playsinline preload="metadata" poster="/assets/hero_m_en.jpg" aria-label="A phone snaps avocado toast and shows its glucose load"><source src="/assets/hero_m_en.mp4" type="video/mp4"></video><img src="/assets/hero_m_en.jpg" alt="A phone over avocado toast showing glucose load 34, Medium"></div>
+  </div>
+
+  <!-- 1 첫 화면 -->
+  <section class="wrap hero" id="top">
+    <div>
+      <span class="eyebrow">made for brunch girls, matcha girls &amp; bread girls</span>
+      <h1>Your lighter days start at breakfast</h1>
+      <p class="lead">Finally, a food app that actually feels good. Snap your plate and see its glucose load and calories in seconds. Croissant, matcha, the 3pm cookie, all of it.</p>
+      <div class="cta">
+        <a class="appstore" href="https://apps.apple.com/app/apple-store/id6818814742?pt=127993018&amp;ct=web&amp;mt=8"><img src="/assets/appstore_en.svg" alt="Download on the App Store"></a>
+        <span class="soon">Coming soon to Google Play</span>
+      </div>
+      <p class="fine">3 days free on the yearly plan • Cancel anytime</p>
+      <a class="more" href="#how">Not sure yet? See how it works ↓</a>
+      <div class="qr"><img src="/assets/qr_en.svg" alt="QR code to download Evn AI"><p>On your laptop? Scan with your phone.</p></div>
+    </div>
+    <div class="stage">
+      <div class="phone"><img src="/assets/result_en.webp" width="585" height="1266" alt="Evn AI result screen: Matcha latte and Croissant, glucose load 32, Medium"></div>
+      <div class="chip grade"><small>Glucose load</small><b>32</b><span><i class="dot" style="background:var(--mid)"></i>Medium</span></div>
+      <div class="chip a"><img src="/assets/food_bread.webp" alt=""><span>Croissant<small>43% of the load</small></span><span><i class="dot" style="background:var(--low)"></i>GL 14</span></div>
+      <div class="chip b"><img src="/assets/food_drink.webp" alt=""><span>Matcha latte<small>57% of the load</small></span><span><i class="dot" style="background:var(--low)"></i>GL 18</span></div>
+    </div>
+  </section>
+
+  <!-- 2 사실 띠 -->
+  <div class="wrap"><p class="facts"><span><b>1,900+</b> foods in our list</span><span>Nutrition data from <b>USDA</b> &amp; Korea's <b>MFDS</b></span><span>Glycemic index from <b>published research</b></span><span><b>Same math</b>, every time</span></p></div>
+
+  <!-- 3 같은 칼로리, 다른 부하 -->
+  <section class="wrap center">
+    <span class="kicker">see what's really on your plate</span>
+    <h2>Same 300 calories, different glucose load</h2>
+    <p class="lead">Eat lighter without eating less, and nothing's off the menu.</p>
+    <div class="pair">
+      <div class="food"><img src="/assets/food_bread.webp" alt=""><div style="text-align:left"><h3>Plain bagel</h3><small>300 cal</small></div><span class="num"><i class="dot" style="background:var(--high)"></i>35</span><span class="bar"><i style="width:100%;background:var(--high)"></i></span><span class="tag" style="color:var(--high);text-align:left">Glucose load · High</span></div>
+      <div class="food"><img src="/assets/food_egg_tofu.webp" alt=""><div style="text-align:left"><h3>Scrambled eggs</h3><small>300 cal</small></div><span class="num"><i class="dot" style="background:var(--low)"></i>0</span><span class="bar"><i style="width:0%"></i></span><span class="tag" style="color:var(--low);text-align:left">Glucose load · Low</span></div>
+    </div>
+    <p class="pair-note">For a snack or drink · Low 0–10 · Medium 11–19 · High 20+ · Estimated from our food list, the same numbers the app shows.</p>
+  </section>
+
+  <!-- 4 3단계 -->
+  <section class="wrap" id="how">
+    <span class="kicker">it takes 3 seconds</span>
+    <h2>Know your plate. Keep your croissant.</h2>
+    <div class="steps">
+      <div class="step"><div class="shot"><img src="/assets/step_camera_en.webp" width="390" height="845" alt="Camera screen"></div><div><span class="n">1</span><h3>Snap your plate</h3><p>Take a photo of what you're about to eat. Brunch, desk lunch, dessert, all of it.</p></div></div>
+      <div class="step"><div class="shot"><img src="/assets/step_analyzing_en.webp" width="390" height="845" alt="Finding the foods on the plate"></div><div><span class="n">2</span><h3>See what's adding up</h3><p>Glucose load and calories for the whole plate, plus which food adds the most.</p></div></div>
+      <div class="step"><div class="shot"><img src="/assets/step_result_en.webp" width="390" height="845" alt="Result screen with glucose load and each food"></div><div><span class="n">3</span><h3>Swap one thing, if you want</h3><p>One easy swap for a lighter day. Or keep it exactly as it is.</p></div></div>
+    </div>
+  </section>
+
+  <!-- 6 안심 -->
+  <section class="wrap">
+    <div class="keep">
+      <h2>Do I have to give up bread?</h2>
+      <p>Nope. Evn AI doesn't do food rules, calorie targets you have to hit, or weighing every bite. It shows what's on your plate. The rest is up to you.</p>
+    </div>
+  </section>
+
+  <!-- 7 기능 -->
+  <section class="wrap">
+    <h2>Little habits that actually fit your day</h2>
+    <div class="features">
+      <div class="feature"><h3>A glucose load for every plate</h3><p>One photo gives you the load for each food and for the whole meal.</p></div>
+      <div class="feature"><h3>This or that</h3><p>Torn between two plates? Snap both and pick the lighter one.</p></div>
+      <div class="feature"><h3>Your week at a glance</h3><p>Your daily total, your history and your streak, all in one place.</p></div>
+    </div>
+  </section>
+
+  <!-- 7-1 연구(근거 docs/research/2026-10-05_women_evidence.md 5-2: 주어는 연구, 한계 문장·출처를 같이, 받기 버튼과 떨어진 자리) -->
+  <section class="wrap research">
+    <span class="kicker">not promises, just what researchers saw</span>
+    <h2>What the research says</h2>
+    <p class="lead">Small studies, real numbers. Here's what scientists have seen about meals that raise blood sugar quickly.</p>
+    <div class="studies">
+      <figure class="study">
+        <span class="emoji" aria-hidden="true">🪞</span>
+        <h3>Fewer breakouts on lower-load meals</h3>
+        <div class="bars">
+          <div class="row"><span>Lower glycemic-load diet</span><span class="track"><i data-w="100"></i></span><b><span class="count" data-to="23.5" data-dec="1">0</span></b></div>
+          <div class="row muted"><span>Usual diet</span><span class="track"><i data-w="51"></i></span><b><span class="count" data-to="12.0" data-dec="1">0</span></b></div>
+        </div>
+        <p class="unit">fewer breakouts</p>
+        <figcaption><a href="https://pubmed.ncbi.nlm.nih.gov/17616769/">Smith et al., Am J Clin Nutr 2007</a> · 12-week study, 43 young men. A Korean study (<a href="https://pubmed.ncbi.nlm.nih.gov/22678562/">Kwon et al. 2012</a>, 32 adults) saw fewer breakouts too. Small studies, and the science isn't settled.</figcaption>
+      </figure>
+      <figure class="study">
+        <span class="emoji" aria-hidden="true">🍪</span>
+        <h3>The bigger the dip, the hungrier later</h3>
+        <p class="big">+<span class="count" data-to="312" data-dec="0">0</span></p>
+        <p class="unit">more calories that day</p>
+        <p class="sub">+75 kcal in the 3–4 hours after breakfast, and 9% hungrier</p>
+        <figcaption><a href="https://www.nature.com/articles/s42255-021-00383-x">Wyatt et al., Nature Metabolism 2021</a> · 1,070 people wearing glucose monitors, comparing people whose blood sugar dipped most after meals. Everyone's different.</figcaption>
+      </figure>
+      <figure class="study">
+        <span class="emoji" aria-hidden="true">✨</span>
+        <h3>Looking a little older</h3>
+        <p class="big">+<span class="count" data-to="0.4" data-dec="1">0</span></p>
+        <p class="unit">years older-looking</p>
+        <p class="sub">for each 1 mmol/L higher blood sugar, rated from face photos</p>
+        <figcaption><a href="https://pubmed.ncbi.nlm.nih.gov/22102339/">Noordam et al., Age 2013</a> · 602 adults in their 60s. It measured blood sugar, not meals. Whether meal choices alone change how skin ages hasn't been shown.</figcaption>
+      </figure>
+    </div>
+    <p class="research-foot">Evn AI shows each meal's glucose load and calories. It doesn't measure your blood sugar, and it isn't meant to diagnose, treat or prevent any condition.</p>
+  </section>
+
+  <!-- 8 신뢰·사진 -->
+  <section class="wrap">
+    <div class="band">
+      <div><h3>How the numbers work</h3><ul>
+        <li>The AI only recognizes your food. The numbers come from published nutrition data and glycemic index research, calculated the same way every time.</li>
+        <li>Glucose load is an estimate per serving. Not medical advice.</li>
+      </ul></div>
+      <div><h3>What happens to your photo</h3><ul>
+        <li>It goes to an AI service (Google or Anthropic, USA) to recognize the food.</li>
+        <li>It isn't stored on Evn AI's servers.</li>
+        <li>You can delete your history and account anytime in the app's settings.</li>
+      </ul></div>
+    </div>
+  </section>
+
+  <!-- 10 자주 묻는 질문 -->
+  <section class="wrap">
+    <span class="kicker">before you hit download</span>
+    <h2>Got a question?</h2>
+    <div class="faq">
+      <details><summary>Is Evn AI a diet app?</summary><p>No. There are no food rules and nothing is off-limits. Daily goals are optional and just a starting point.</p></details>
+      <details><summary>How accurate is it?</summary><p>It's an estimate. No food app is perfect. You can see every food it found, and fix or add one in a tap.</p></details>
+      <details><summary>I paid but the app still shows the paywall. What gives?</summary><p>Annoying, but fixable. Open the paywall and tap "Restore purchases." Make sure you're signed in with the same Apple ID or Google account you paid with.</p></details>
+      <details><summary>How do I cancel my subscription or free trial?</summary><p>You can't cancel from inside the app. iPhone: Settings → your name → Subscriptions → Evn AI. Android: Google Play → Payments &amp; subscriptions → Subscriptions. Heads up: deleting the app does not cancel your subscription.</p></details>
+      <details><summary>Can I get a refund?</summary><p>Refunds are handled by Apple or Google. Request one at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> or through Google Play.</p></details>
+      <details><summary>Is this medical advice?</summary><p>No. Evn AI is for curiosity, not a diagnosis or treatment. If you have diabetes or another condition, talk to your doctor.</p></details>
+      <details><summary>What happens to my photos?</summary><p>Your photo goes to an AI service (Google or Anthropic, USA) for recognition and isn't stored on Evn AI's servers. You can delete your history and account anytime in the app's settings.</p></details>
+      <details><summary>Is it on Android?</summary><p>Evn AI is on the App Store now. Google Play is coming soon.</p></details>
+      <details><summary>Who is it for?</summary><p>For you if you love bread and don't want to quit it, and like soft routines more than strict plans. Maybe not for you if you need medical advice or want every gram weighed.</p></details>
+    </div>
+  </section>
+
+  <!-- 11 마무리 -->
+  <section class="wrap closing">
+    <h2>Glow a little more, one plate at a time</h2>
+    <div class="cta">
+      <a class="appstore" href="https://apps.apple.com/app/apple-store/id6818814742?pt=127993018&amp;ct=web&amp;mt=8"><img src="/assets/appstore_en.svg" alt="Download on the App Store"></a>
+    </div>
+    <p class="fine">3 days free on the yearly plan • Cancel anytime</p>
+    <div class="qr"><img src="/assets/qr_en.svg" alt="QR code to download Evn AI"><p>On your laptop? Scan with your phone.</p></div>
+  </section>
 </main>
-<footer>TIVIA Inc. · <a href="mailto:admin@tivia.kr">admin@tivia.kr</a> · <a href="terms">이용약관 Terms</a> · <a href="privacy">개인정보 처리방침 Privacy</a> · <a href="support">지원 Support</a></footer>
+
+<div class="sticky" id="sticky" aria-hidden="true">
+  <img class="icon" src="/assets/icon.png" alt="">
+  <p>Evn AI<small>3 days free on the yearly plan</small></p>
+  <a class="appstore" href="https://apps.apple.com/app/apple-store/id6818814742?pt=127993018&amp;ct=web_sticky&amp;mt=8" tabindex="-1"><img src="/assets/appstore_en.svg" alt="Download on the App Store"></a>
+</div>
+
+<footer class="wrap">
+  <nav>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+    <a href="/support">Support</a>
+    <a href="mailto:support@evnai.app">support@evnai.app</a>
+    <a href="https://apps.apple.com/account/subscriptions">Manage subscription (Apple)</a>
+    <a href="https://play.google.com/store/account/subscriptions">Manage subscription (Google)</a>
+  </nav>
+  <p>Glucose load (GL) is an estimate per serving, based on the type and amount of carbs. Not medical advice.</p>
+  <p>© 2026 TIVIA Inc.</p>
+</footer>
 <script>
-(function(){
-  var q=new URLSearchParams(location.search).get('lang');
-  var l=q||((navigator.language||'en').toLowerCase().indexOf('ko')===0?'ko':'en');
-  function show(x){document.querySelectorAll('[data-l]').forEach(function(e){
-    if(e.tagName==='ARTICLE'){e.hidden=e.dataset.l!==x}else{e.setAttribute('aria-pressed',String(e.dataset.l===x))}});
-    document.documentElement.lang=x}
-  document.querySelectorAll('.lang button').forEach(function(b){b.onclick=function(){show(b.dataset.l)}});
-  show(l==='ko'?'ko':'en');
-})();
+  // 휴대폰: 첫 화면이 화면 밖으로 나가면 아래 받기 막대를 띄운다(첫 화면에 이미 버튼이 있어 겹치지 않게)
+  (function () {
+    var bar = document.getElementById('sticky'), hero = document.getElementById('top');
+    if (!('IntersectionObserver' in window) || !bar || !hero) return;
+    new IntersectionObserver(function (e) { var on = !e[0].isIntersecting; bar.classList.toggle('on', on); bar.setAttribute('aria-hidden', on ? 'false' : 'true'); }).observe(hero);
+  })();
+  // 연구 섹션: 화면에 들어오면 막대가 자라고 숫자가 세어 올라간다(동작 줄이기면 바로 끝값)
+  (function () {
+    var box = document.querySelector('.studies'); if (!box) return;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function run() {
+      box.classList.add('in');
+      box.querySelectorAll('.track i').forEach(function (b) { b.style.width = b.getAttribute('data-w') + '%'; });
+      box.querySelectorAll('.count').forEach(function (c) {
+        var to = parseFloat(c.getAttribute('data-to')), dec = +c.getAttribute('data-dec'), t0 = null;
+        if (reduce) { c.textContent = to.toFixed(dec); return; }
+        function step(t) { if (!t0) t0 = t; var k = Math.min(1, (t - t0) / 1100); k = 1 - Math.pow(1 - k, 3); c.textContent = (to * k).toFixed(dec); if (k < 1) requestAnimationFrame(step); }
+        requestAnimationFrame(step);
+      });
+    }
+    if (!('IntersectionObserver' in window)) return run();
+    var io = new IntersectionObserver(function (e) { if (e[0].isIntersecting) { run(); io.disconnect(); } }, { threshold: 0.3 });
+    io.observe(box);
+  })();
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { document.querySelectorAll('.reel video').forEach(function (v) { v.pause(); }); }
 </script>
 </body>
 </html>
