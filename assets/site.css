@@ -28,7 +28,7 @@ body {
 a { color: var(--accent); }
 img, video { max-width: 100%; display: block; }
 .wrap { max-width: 1120px; margin: 0 auto; padding-inline: 20px; }
-section { padding-block: 56px; }
+section { padding-block: 40px; }
 h1, h2, h3 { line-height: 1.18; letter-spacing: -0.02em; text-wrap: balance; margin: 0; }
 h1 { font-size: clamp(36px, 6.4vw, 62px); font-weight: 800; }
 h2 { font-size: clamp(28px, 4.2vw, 42px); font-weight: 800; }
@@ -156,7 +156,7 @@ footer nav a { color: var(--ink); text-decoration: none; font-weight: 600; }
 footer p + p { margin-top: 6px; }
 
 @media (min-width: 860px) {
-  section { padding-block: 76px; }
+  section { padding-block: 52px; }
   .hero { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); padding-top: 40px; }
   .stage { width: 300px; }
   .qr { display: flex; }
@@ -205,9 +205,13 @@ footer p + p { margin-top: 6px; }
 .cards { display: grid; gap: 14px; margin-top: 24px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .who { margin: 0; border-radius: 22px; overflow: hidden; background: var(--card); border: 1px solid var(--line); box-shadow: 0 16px 34px -22px rgba(58, 38, 24, 0.4); display: flex; flex-direction: column; }
 .who img { width: 100%; aspect-ratio: 4 / 5; height: auto; object-fit: cover; }
-.who figcaption { padding: 12px 14px 14px; display: grid; gap: 4px; }
+.who figcaption { padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 4px; flex: 1; }
 .who b { font-size: 17px; }
-.who span { font-size: 14px; line-height: 1.4; color: var(--muted); }
-.who em { font-style: normal; font-size: 13px; font-weight: 700; margin-top: 6px; background: var(--cream); color: var(--ink); border-radius: 999px; padding: 4px 10px; width: fit-content; }
+.who figcaption > span { font-size: 14px; line-height: 1.5; color: var(--muted); margin-bottom: 10px; }
+.who em { font-style: normal; font-size: 13px; font-weight: 700; margin-top: auto; background: var(--cream); color: var(--ink); border-radius: 999px; padding: 4px 10px; width: fit-content; }
 @media (min-width: 860px) { .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; } }
-@media (max-width: 420px) { .who span { font-size: 13px; } .who em { font-size: 12px; } }
+.who em span { font-size: inherit; line-height: 1.35; color: inherit; margin: 0; }
+.who em span:last-child { white-space: nowrap; }
+.who em .sep { font-style: normal; }
+@media (max-width: 1099px) { .who em { border-radius: 14px; } .who em span { display: block; } .who em .sep { display: none; } }
+@media (max-width: 420px) { .who figcaption > span { font-size: 13px; } .who em { font-size: 12px; } }
