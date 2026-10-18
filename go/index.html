@@ -60,7 +60,7 @@ function evnDest(ua, rawTag, androidLive, rawPage) {
 (function () {
   var live = false;
   var q = new URLSearchParams(location.search);
-  var d = evnDest(navigator.userAgent, q.get("c"), live, q.get("p"));
+  var d = evnDest(navigator.userAgent, q.get("c") || "bio", live, q.get("p"));
   document.getElementById("ios").href = d.ios;
   document.getElementById("android").href = d.android;
   document.getElementById(live ? "soon" : "android").style.display = "none";
