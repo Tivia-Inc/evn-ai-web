@@ -60,7 +60,7 @@ function evnDest(ua, rawTag, androidLive, rawPage) {
   return { tag: tag, ios: ios, android: android, go: go };
 }
 (function () {
-  var live = false;
+  var live = true;
   var q = new URLSearchParams(location.search);
   var d = evnDest(navigator.userAgent, q.get("c") || "us_brand_ig", live, q.get("p"));
   document.getElementById("ios").href = d.ios;
