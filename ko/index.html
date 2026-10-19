@@ -18,8 +18,8 @@
 <link rel="icon" href="/assets/icon.png">
 <link rel="apple-touch-icon" href="/assets/icon.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
-<link rel="stylesheet" href="/assets/site.css?v=20261018d">
-<!-- 구조화 데이터(SEO·AEO, 2026-10-19 PO). 앱 이름은 스토어 이름과 같게(listing 1절). Android가 나오면 operatingSystem·downloadUrl에 Google Play를 더한다. 자주 묻는 질문(FAQPage)은 tool/build_legal_site.py가 아래 <details>에서 만들어 게시본에만 넣는다 -->
+<link rel="stylesheet" href="/assets/site.css?v=20261019a">
+<!-- 구조화 데이터(SEO·AEO, 2026-10-19 PO). 앱 이름은 스토어 이름과 같게(listing 1절). 자주 묻는 질문(FAQPage)은 tool/build_legal_site.py가 아래 <details>에서 만들어 게시본에만 넣는다 -->
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -62,9 +62,12 @@
    ],
    "description": "Evn AI는 음식 사진 한 장으로 그 음식의 혈당 부하와 칼로리를 추정해 보여 주는 음식 스캔 앱이에요. 혈당을 재는 앱이 아니라, 접시 위 음식을 살펴보는 앱이에요.",
    "applicationCategory": "HealthApplication",
-   "operatingSystem": "iOS 15.0 or later",
+   "operatingSystem": "iOS 15.0 or later, Android 8.0 or later",
    "url": "https://apps.apple.com/app/id6818814742",
-   "downloadUrl": "https://apps.apple.com/app/id6818814742",
+   "downloadUrl": [
+    "https://apps.apple.com/app/id6818814742",
+    "https://play.google.com/store/apps/details?id=com.evnai.app"
+   ],
    "image": "https://evnai.app/assets/icon.png",
    "inLanguage": "ko",
    "publisher": {
@@ -146,7 +149,7 @@
    "name": "안드로이드폰에서도 되나요?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "지금은 App Store에만 있어요. Google Play에도 곧 나와요."
+    "text": "네, Google Play와 App Store 모두에 있어요."
    }
   },
   {
@@ -182,7 +185,7 @@
       <p class="lead">사진 한 장 찍으면 혈당 부하와 칼로리가 바로 나와요. 아침 크루아상도, 말차라떼도, 오후 3시 쿠키도요. 끊지 말고, 먹으면서 관리해요.</p>
       <div class="cta">
         <a class="appstore" href="https://apps.apple.com/kr/app/apple-store/id6818814742?pt=127993018&amp;ct=web_ko&amp;mt=8"><img src="/assets/appstore_ko.svg" alt="App Store에서 다운로드"></a>
-        <span class="soon">Google Play 곧 출시</span>
+        <a class="googleplay" href="https://play.google.com/store/apps/details?id=com.evnai.app&amp;referrer=utm_source%3Dweb%26utm_campaign%3Dweb_ko"><img src="/assets/googleplay_ko.png" alt="Google Play에서 다운로드"></a>
       </div>
       <p class="fine">연간 플랜 3일 무료 · 언제든 해지</p>
       <div class="qr"><img src="/assets/qr_ko.svg" alt="Evn AI 내려받기 QR 코드"><p>PC로 보고 있다면 휴대폰 카메라로 비춰 보세요.</p></div>
@@ -318,7 +321,7 @@
       <details><summary>환불되나요?</summary><p>환불은 Apple이나 Google이 맡아요. <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>이나 Google Play에서 요청하면 돼요.</p></details>
       <details><summary>의료 조언인가요?</summary><p>아니에요. 매일 먹는 음식을 더 잘 알게 돕는 앱이에요. 당뇨나 다른 질환이 있다면 꼭 의사와 상담하세요.</p></details>
       <details><summary>찍은 사진은 어디로 가나요?</summary><p>음식을 알아보려고 미국의 AI 서비스(Google 또는 Anthropic)로 보내요. Evn AI 서버에는 저장하지 않아요. 기록과 계정은 앱 설정에서 언제든 지우면 돼요.</p></details>
-      <details><summary>안드로이드폰에서도 되나요?</summary><p>지금은 App Store에만 있어요. Google Play에도 곧 나와요.</p></details>
+      <details><summary>안드로이드폰에서도 되나요?</summary><p>네, Google Play와 App Store 모두에 있어요.</p></details>
       <details><summary>어떤 분께 잘 맞나요?</summary><p>빵을 끊고 싶지 않은 분, 빡빡한 식단보다 가벼운 습관이 편한 분, 먹으면서 피부와 컨디션까지 챙기고 싶은 분께 잘 맞아요.</p></details>
     </div>
   </section>
@@ -328,6 +331,7 @@
     <h2>한 끼 한 끼 더 예뻐지는 식사</h2>
     <div class="cta">
       <a class="appstore" href="https://apps.apple.com/kr/app/apple-store/id6818814742?pt=127993018&amp;ct=web_ko&amp;mt=8"><img src="/assets/appstore_ko.svg" alt="App Store에서 다운로드"></a>
+      <a class="googleplay" href="https://play.google.com/store/apps/details?id=com.evnai.app&amp;referrer=utm_source%3Dweb%26utm_campaign%3Dweb_ko_end"><img src="/assets/googleplay_ko.png" alt="Google Play에서 다운로드"></a>
     </div>
     <p class="fine">연간 플랜 3일 무료 · 언제든 해지</p>
     <div class="qr"><img src="/assets/qr_ko.svg" alt="Evn AI 내려받기 QR 코드"><p>PC로 보고 있다면 휴대폰 카메라로 비춰 보세요.</p></div>
@@ -337,7 +341,7 @@
 <div class="sticky" id="sticky" aria-hidden="true">
   <img class="icon" src="/assets/icon.png" alt="">
   <p>Evn AI<small>연간 플랜 3일 무료</small></p>
-  <a class="appstore" href="https://apps.apple.com/kr/app/apple-store/id6818814742?pt=127993018&amp;ct=web_ko_sticky&amp;mt=8" tabindex="-1"><img src="/assets/appstore_ko.svg" alt="App Store에서 다운로드"></a>
+  <a class="appstore" id="sticky-store" data-play="https://play.google.com/store/apps/details?id=com.evnai.app&amp;referrer=utm_source%3Dweb%26utm_campaign%3Dweb_ko_sticky" data-play-img="/assets/googleplay_ko.png" data-play-alt="Google Play에서 다운로드" href="https://apps.apple.com/kr/app/apple-store/id6818814742?pt=127993018&amp;ct=web_ko_sticky&amp;mt=8" tabindex="-1"><img src="/assets/appstore_ko.svg" alt="App Store에서 다운로드"></a>
 </div>
 
 <footer class="wrap">
@@ -354,6 +358,12 @@
   <p>© 2026 TIVIA Inc.</p>
 </footer>
 <script>
+  // 안드로이드 폰에서는 아래 고정 막대의 버튼을 Google Play로 바꾼다(2026-10-19 Play 공개)
+  (function () {
+    var a = document.getElementById('sticky-store'); if (!a || !/android/i.test(navigator.userAgent)) return;
+    a.href = a.getAttribute('data-play'); a.className = 'googleplay';
+    var i = a.querySelector('img'); i.src = a.getAttribute('data-play-img'); i.alt = a.getAttribute('data-play-alt');
+  })();
   (function () {
     var bar = document.getElementById('sticky'), hero = document.getElementById('top');
     if (!('IntersectionObserver' in window) || !bar || !hero) return;

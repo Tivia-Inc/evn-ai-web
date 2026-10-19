@@ -49,7 +49,8 @@ p { margin: 0; }
 
 /* 버튼 줄 */
 .cta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 26px; }
-.appstore img { height: 54px; width: auto; }
+.appstore img, .googleplay img { height: 54px; width: auto; }
+@media (max-width: 480px) { .cta .appstore img, .cta .googleplay img { height: 48px; } } /* 두 스토어 버튼이 390pt 폭에서 한 줄에 들어가게(2026-10-19) */
 .soon { display: inline-flex; align-items: center; height: 54px; padding: 0 18px; border: 1.5px dashed var(--line); border-radius: 12px; font-size: 14px; font-weight: 600; color: var(--muted); }
 .fine { margin-top: 12px; font-size: 14px; color: var(--muted); }
 .more { display: inline-block; margin-top: 14px; font-size: 15px; font-weight: 600; color: var(--ink); }
@@ -147,7 +148,7 @@ p { margin: 0; }
 .sticky img.icon { width: 40px; height: 40px; border-radius: 22%; }
 .sticky p { flex: 1; min-width: 0; font-size: 14px; font-weight: 700; line-height: 1.3; }
 .sticky p small { display: block; font-weight: 600; color: var(--muted); font-size: 12px; }
-.sticky .appstore img { height: 40px; }
+.sticky .appstore img, .sticky .googleplay img { height: 40px; }
 
 /* 바닥 */
 footer { border-top: 1px solid var(--line); padding-block: 28px 110px; font-size: 14px; color: var(--muted); }
