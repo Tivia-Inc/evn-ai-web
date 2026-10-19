@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Evn AI · 예쁜 하루는 아침 한 컷부터</title>
+<title>Evn AI - 혈당 부하·칼로리 음식 스캔 앱</title>
 <meta name="description" content="음식 사진 한 장 찍으면 혈당 부하와 칼로리가 바로 나와요. 크루아상도 말차라떼도 끊지 않아도 돼요. 연간 플랜 3일 무료.">
 <link rel="canonical" href="https://evnai.app/ko/">
 <link rel="alternate" hreflang="en" href="https://evnai.app/">
@@ -19,6 +19,142 @@
 <link rel="apple-touch-icon" href="/assets/icon.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <link rel="stylesheet" href="/assets/site.css?v=20261018d">
+<!-- 구조화 데이터(SEO·AEO, 2026-10-19 PO). 앱 이름은 스토어 이름과 같게(listing 1절). Android가 나오면 operatingSystem·downloadUrl에 Google Play를 더한다. 자주 묻는 질문(FAQPage)은 tool/build_legal_site.py가 아래 <details>에서 만들어 게시본에만 넣는다 -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://evnai.app/#org",
+   "name": "TIVIA Inc.",
+   "alternateName": "주식회사 티비야",
+   "url": "https://evnai.app/",
+   "email": "support@evnai.app",
+   "logo": "https://evnai.app/assets/icon.png"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://evnai.app/#website",
+   "url": "https://evnai.app/",
+   "name": "Evn AI",
+   "inLanguage": [
+    "en",
+    "ko"
+   ],
+   "publisher": {
+    "@id": "https://evnai.app/#org"
+   }
+  },
+  {
+   "@type": "MobileApplication",
+   "@id": "https://evnai.app/#app",
+   "name": "Evn AI",
+   "alternateName": [
+    "Evn AI: Blood Sugar Food Scan",
+    "Evn AI - 혈당 부하·칼로리 음식 스캔",
+    "이븐 AI"
+   ],
+   "description": "Evn AI는 음식 사진 한 장으로 그 음식의 혈당 부하와 칼로리를 추정해 보여 주는 음식 스캔 앱이에요. 혈당을 재는 앱이 아니라, 접시 위 음식을 살펴보는 앱이에요.",
+   "applicationCategory": "HealthApplication",
+   "operatingSystem": "iOS 15.0 or later",
+   "url": "https://apps.apple.com/app/id6818814742",
+   "downloadUrl": "https://apps.apple.com/app/id6818814742",
+   "image": "https://evnai.app/assets/icon.png",
+   "inLanguage": "ko",
+   "publisher": {
+    "@id": "https://evnai.app/#org"
+   },
+   "featureList": [
+    "음식 사진 한 장으로 혈당 부하·칼로리 확인",
+    "두 음식을 찍어 비교",
+    "좋아하는 음식은 그대로 두고 하나만 바꾸는 제안",
+    "USDA·식약처 자료로 계산한 숫자"
+   ]
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "다이어트 앱인가요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "아니에요. 굶거나 참을 필요 없어요. 좋아하는 걸 먹으면서 한 끼씩 더 가볍게 고르면 돼요. 하루 목표는 원할 때만 정하면 돼요."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "얼마나 정확한가요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "AI가 사진에서 음식을 찾고, 숫자는 식약처·USDA 자료로 계산해요. 혹시 다르게 찾은 음식이 있으면 눌러서 바로 고치거나 더하면 숫자도 함께 바뀌어요."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "결제했는데 결제 화면이 계속 떠요",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "번거로우셨죠. 결제 화면에서 '구매 복원'을 누르면 돼요. 결제한 Apple ID나 Google 계정으로 로그인돼 있는지도 확인해 주세요."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "구독이나 무료 체험은 어떻게 해지하나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "해지는 앱 밖에서 해요. 아이폰은 설정 → 내 이름 → 구독 → Evn AI, 안드로이드는 Google Play → 결제 및 정기 결제 → 정기 결제에서 하면 돼요. 앱을 지워도 구독은 그대로 남아 있으니 꼭 해지까지 해 주세요."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "환불되나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "환불은 Apple이나 Google이 맡아요. reportaproblem.apple.com이나 Google Play에서 요청하면 돼요."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "의료 조언인가요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "아니에요. 매일 먹는 음식을 더 잘 알게 돕는 앱이에요. 당뇨나 다른 질환이 있다면 꼭 의사와 상담하세요."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "찍은 사진은 어디로 가나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "음식을 알아보려고 미국의 AI 서비스(Google 또는 Anthropic)로 보내요. Evn AI 서버에는 저장하지 않아요. 기록과 계정은 앱 설정에서 언제든 지우면 돼요."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "안드로이드폰에서도 되나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "지금은 App Store에만 있어요. Google Play에도 곧 나와요."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "어떤 분께 잘 맞나요?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "빵을 끊고 싶지 않은 분, 빡빡한 식단보다 가벼운 습관이 편한 분, 먹으면서 피부와 컨디션까지 챙기고 싶은 분께 잘 맞아요."
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <header class="wrap top">
