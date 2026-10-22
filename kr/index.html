@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Evn AI - 혈당 부하·칼로리 음식 스캔</title>
+<meta name="description" content="음식 사진 한 장이면 혈당 부하와 칼로리가 보여요. 좋아하는 음식은 그대로, 알고 먹어요.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Evn AI">
+<meta property="og:title" content="Evn AI - 혈당 부하·칼로리 음식 스캔">
+<meta property="og:description" content="음식 사진 한 장이면 혈당 부하와 칼로리가 보여요. 좋아하는 음식은 그대로, 알고 먹어요.">
+<meta property="og:image" content="https://evnai.app/go/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://evnai.app/kr/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Evn AI - 혈당 부하·칼로리 음식 스캔">
+<meta name="twitter:description" content="음식 사진 한 장이면 혈당 부하와 칼로리가 보여요. 좋아하는 음식은 그대로, 알고 먹어요.">
+<meta name="twitter:image" content="https://evnai.app/go/og.png">
+<link rel="icon" href="../icon.png">
+<link rel="apple-touch-icon" href="../icon.png">
+<style>
+:root{--bg:#F0C0D0;--fg:#1a1013;--sub:#7a4a55;--btn:#1a1013;--btnfg:#fff;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--fg);font:17px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;display:flex;align-items:center;justify-content:center;padding:24px 16px}
+main{max-width:420px;width:100%;text-align:center}
+img{width:96px;height:96px;border-radius:22px;box-shadow:0 4px 14px rgba(0,0,0,.12)}
+h1{font-size:30px;margin:20px 0 6px;letter-spacing:-.5px}
+p{color:var(--sub);margin:0 0 26px}
+a.btn{display:block;background:var(--btn);color:var(--btnfg);text-decoration:none;font-weight:600;border-radius:14px;padding:15px 18px;margin:10px 0;min-height:48px}
+small{display:block;color:var(--sub);margin-top:22px;font-size:13px}
+p.soon{margin:14px 0 0;font-weight:600;color:var(--fg)}
+a.more{display:block;margin-top:18px;color:var(--fg);font-weight:600;text-decoration:underline}
+</style>
+</head>
+<body>
+<main>
+<img src="../icon.png" alt="">
+<h1>Evn AI</h1>
+<p>사진 한 장이면 혈당 부하와 칼로리가 보여요 🤍</p>
+<a class="btn" id="ios" href="https://apps.apple.com/app/apple-store/id6818814742?pt=127993018&amp;ct=bio&amp;mt=8">App Store에서 받기</a>
+<a class="btn" id="android" href="https://play.google.com/store/apps/details?id=com.evnai.app&amp;referrer=utm_source%3Dbio%26utm_campaign%3Dbio">Google Play에서 받기</a>
+<p class="soon" id="soon">Android는 곧 Google Play에서 만나요 💌</p>
+<a class="more" href="https://evnai.app/ko/">Evn AI가 뭔가요? 자세히 보기 →</a>
+<small>혈당 부하(GL)는 1인분 기준, 탄수화물의 종류와 양으로 추정한 값이에요. 의료 조언이 아니에요.</small>
+</main>
+<script>
+// 순수 함수: marketing/_tools/build_go_page.py의 시험이 같은 함수를 node로 돌린다
+var PAGES = {};
+function evnDest(ua, rawTag, androidLive, rawPage) {
+  var tag = String(rawTag || "bio").toLowerCase().replace(/[^a-z0-9_]/g, "").slice(0, 30) || "bio";
+  var pk = String(rawPage || "").toLowerCase();
+  var ppid = Object.prototype.hasOwnProperty.call(PAGES, pk) && /^[0-9a-f-]{36}$/.test(PAGES[pk]) ? PAGES[pk] : "";
+  var ios = "https://apps.apple.com/app/apple-store/id6818814742?" + (ppid ? "ppid=" + ppid + "&" : "") + "pt=127993018&ct=" + tag + "&mt=8";
+  var android = "https://play.google.com/store/apps/details?id=com.evnai.app&referrer=" +
+    encodeURIComponent("utm_source=" + tag + "&utm_campaign=" + tag);
+  var isAndroid = /android/i.test(ua);
+  var go = isAndroid ? (androidLive ? android : null) : /iphone|ipad|ipod/i.test(ua) ? ios : null;
+  return { tag: tag, ios: ios, android: android, go: go };
+}
+(function () {
+  var live = true;
+  var q = new URLSearchParams(location.search);
+  var d = evnDest(navigator.userAgent, q.get("c") || "kr_bio", live, q.get("p"));
+  document.getElementById("ios").href = d.ios;
+  document.getElementById("android").href = d.android;
+  document.getElementById(live ? "soon" : "android").style.display = "none";
+  // 한국 꼬리표(kr_)로 영어 페이지에 들어온 PC 방문자는 한국어 페이지로(모바일은 바로 스토어, 2026-10-22 PO)
+  if (!d.go && false && d.tag.indexOf("kr_") === 0) { location.replace("../kr/" + location.search); return; }
+  if (d.go) location.replace(d.go);
+})();
+</script>
+</body>
+</html>

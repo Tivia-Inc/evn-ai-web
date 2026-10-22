@@ -66,6 +66,8 @@ function evnDest(ua, rawTag, androidLive, rawPage) {
   document.getElementById("ios").href = d.ios;
   document.getElementById("android").href = d.android;
   document.getElementById(live ? "soon" : "android").style.display = "none";
+  // 한국 꼬리표(kr_)로 영어 페이지에 들어온 PC 방문자는 한국어 페이지로(모바일은 바로 스토어, 2026-10-22 PO)
+  if (!d.go && true && d.tag.indexOf("kr_") === 0) { location.replace("../kr/" + location.search); return; }
   if (d.go) location.replace(d.go);
 })();
 </script>
