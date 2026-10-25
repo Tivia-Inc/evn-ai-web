@@ -217,3 +217,10 @@ footer p + p { margin-top: 6px; }
 .who em .sep { font-style: normal; }
 @media (max-width: 1099px) { .who em { border-radius: 14px; } .who em span { display: block; } .who em .sep { display: none; } }
 @media (max-width: 420px) { .who figcaption > span { font-size: 13px; } .who em { font-size: 12px; } }
+
+/* 2026-10-25 첫 화면 신뢰 알약, 기능 태그, 스파이크 궁금증 줄 */
+.trust { display: inline-block; margin-top: 16px; padding: 6px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--card); font-size: 14px; font-weight: 600; color: var(--muted); }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.feature p.tags { margin-top: 14px; }
+.tags span { padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px; font-size: 13px; font-weight: 600; color: var(--ink); }
+.callout { text-align: center; font-size: 19px; font-weight: 700; line-height: 1.45; text-wrap: balance; padding-block: 8px; }
