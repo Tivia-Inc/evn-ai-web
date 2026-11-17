@@ -36,13 +36,14 @@ footer a{color:var(--muted)}
 <main>
 <article lang="ko" data-l="ko">
 <h1>Evn AI 개인정보 처리방침</h1>
-<p><strong>시행일: 2026-11-08</strong> · 운영자: TIVIA Inc. · 문의: support@evnai.app</p>
+<p><strong>시행일: 2026-12-18</strong> · 운영자: TIVIA Inc. · 문의: support@evnai.app</p>
 <p>TIVIA Inc.(이하 "회사")는 Evn AI 앱(이하 "앱")을 운영하면서 「개인정보 보호법」을 지킵니다. 이 방침은 앱이 어떤 정보를 어디에 두고, 누구에게 보내며, 언제 지우는지 설명합니다.</p>
 <h2>한눈에 보기</h2>
 <ul>
 <li>회원 가입이 없습니다. 앱을 처음 열면 익명 사용자 ID가 하나 만들어지고, 전화번호는 받지 않습니다. 이름은 원하면 넣을 수 있고 기기에만 저장됩니다.</li>
 <li>음식 사진은 음식을 알아보기 위해 회사의 서버 함수를 거쳐 Google의 AI 서비스(Gemini API, 미국)나 Anthropic의 AI 서비스(Claude API, 미국)로 전송됩니다. 회사 서버에는 사진을 저장하지 않고, 서버 기록(로그)에도 남기지 않습니다.</li>
 <li>스캔 사진과 결과(음식, 혈당 부하, 칼로리), 이용자가 넣은 이름·키·몸무게(기록한 몸무게 포함)·성별·출생연도, 하루 목표, 배지, 알림 설정은 이용자의 기기에만 저장됩니다.</li>
+<li>AI가 사진에서 알아본 음식 이름 가운데 음식 목록에 없거나 잘 맞지 않은 이름은, 누구의 것인지 알 수 없는 집계(이름과 횟수만)로 모아 음식 목록을 고치는 데 씁니다.</li>
 <li>이용 통계 도구에는 혈당 부하·등급·칼로리·신체 정보·음식 이름·사진을 보내지 않습니다. 다만 이 도구는 접속 IP 주소로 추정한 대략적 위치(나라·지역·도시 수준)를 남깁니다(기기 지역이 캐나다인 기기의 이용 통계 이벤트는 추정하지 않습니다, 1조). 이 도구는 IP 주소 자체와 우편번호·위도·경도를 저장하지 않고, 2026-11-06까지 저장된 값은 1조에 적은 대로 지웁니다. 회사 서버(Supabase)의 로그인 세션 기록과 접속 기록에는 IP 주소가 남고, 접속 기록에는 그 주소로 추정한 도시·우편번호도 남습니다(1조). 앱은 위치 권한을 요청하지 않고 GPS를 쓰지 않습니다. 이용 통계는 앱에서 끌 수 있고, 기기 지역이 캐나다인 기기에서는 처음에 꺼져 있습니다(6조).</li>
 <li>개인정보를 판매하지 않습니다. 기기 지역이 한국·미국인 기기에서는 광고 성과를 재기 위해 메타에 앱 설치·실행, 체험 시작과 구독 이벤트(구매·갱신·해지 등, RevenueCat이 보냄)를 기기 식별자·IP 주소와 함께 보내고, 건강·음식·신체 정보와 사진은 보내지 않습니다(4조 4-2). 이 기기의 iPhone에서는 App Store 광고(Apple Ads)로 설치했는지도 Apple 표준 기여 정보로 잽니다(4-3). 그 밖의 나라로 설정된 기기에서는 앱이 이 광고 성과 측정을 하지 않습니다(4-2).</li>
 <li>프로필 탭의 "내 데이터 모두 지우기"로 기기 데이터와 서버의 익명 계정을 함께 지울 수 있습니다.</li>
@@ -156,6 +157,13 @@ footer a{color:var(--muted)}
 <td>없음</td>
 <td>이용자가 데이터를 지울 때까지</td>
 <td>이용자 요청</td>
+</tr>
+<tr>
+<td>목록에서 찾지 못한 음식 이름 집계(AI가 사진에서 알아본 음식 이름, 음식 DB 지역, 찾은 방식, 횟수, 처음·마지막 본 주. 익명 ID·사진·시각은 담지 않음)</td>
+<td>Supabase(서울)</td>
+<td>없음</td>
+<td>마지막으로 본 주부터 1년</td>
+<td>서비스 개선(정당한 이익). 이용자가 직접 입력한 검색어는 담지 않음. 누구의 스캔인지 알 수 없어 이용자별로 지울 수 없음</td>
 </tr>
 <tr>
 <td>서버 운영 기록: 서버 함수 기록(익명 ID의 해시값, 국가, 모델 이름, 응답 시간, 토큰 수, 처리 결과)과 인프라 접속·인증 기록(IP 주소, 요청 시각, 익명 ID·세션 ID, 기기·앱 정보(user agent), 인프라 업체가 IP 주소로 추정한 나라·시도·도시·우편번호·시간대·통신사, 자동 접속(봇)을 가려내는 데 쓰는 접속 특성값)</td>
@@ -312,6 +320,7 @@ footer a{color:var(--muted)}
 <li><strong>RevenueCat의 구독 기록:</strong> 구독 관리, 구매 복원, 환불 처리에 필요해 남습니다. 삭제를 원하면 6조의 방법으로 요청해 주세요. 회사가 확인한 뒤 직접 지웁니다.</li>
 <li><strong>PostHog의 이용 통계 이벤트와 익명 ID에 붙은 대략적 위치:</strong> 삭제를 원하면 6조의 방법으로 요청해 주세요. 회사가 확인한 뒤 직접 지웁니다.</li>
 <li><strong>서버 운영 기록:</strong> 인프라 업체(Supabase)가 정한 기간 동안 남습니다(1조).</li>
+<li><strong>목록에서 찾지 못한 음식 이름 집계</strong>는 누구의 것인지 알 수 없게 이름과 횟수만 남기므로 계정을 지워도 그대로 남고, 마지막으로 본 주부터 1년이 지나면 지웁니다.</li>
 <li><strong>support@evnai.app로 보내신 이메일.</strong> 요청하시면 지웁니다.</li>
 </ul>
 <p>인터넷에 연결돼 있어야 합니다. 서버에 연결하지 못하면 기기 데이터도 지우지 않고 그대로 두며 알려 드리니, 인터넷에 연결된 뒤 다시 해 주세요.</p>
@@ -369,17 +378,19 @@ footer a{color:var(--muted)}
 <li>2026-11-06: 새 이용자에게 무료 스캔을 여러 번 드릴 때 하루 스캔 횟수로 쓴 횟수를 센다고 적고, '무료 첫 스캔 기록'을 '무료 스캔 기록'으로 고쳤습니다</li>
 <li>2026-11-07: 실제와 다르게 적혀 있던 내용을 바로잡았습니다. 이용 통계 서비스가 IP 주소로 추정해 남기는 대략적 위치와 RevenueCat에서 받는 구독 이벤트, 로그인 세션 기록, 서버 운영 기록의 항목과 보관 기간, 메타에 보내는 항목(구독 이벤트·기기 식별자·IP 주소)과 메타가 IP 주소로 대략적 위치를 추정할 수 있다는 점, 국외 이전 받는 자의 연락처를 적었습니다. 새로 모으는 정보는 없고, 이용 통계 도구는 이제 우편번호·위도·경도와 IP 주소, RevenueCat이 넘겨주는 기기 식별자를 저장하지 않습니다(이미 저장된 값은 1조에 적은 대로 지웁니다). 사실을 바로잡는 변경이라 게시한 날부터 적용합니다</li>
 <li>2026-11-08: 광고 성과 측정(메타·Apple Ads)은 기기 지역이 한국·미국인 기기에서만 하고, 캐나다로 설정된 기기의 이용 통계 이벤트는 위치를 추정하지 않는다고 적었습니다. "앱 사용 정보 보내기" 설정(기기 지역이 캐나다인 기기는 처음에 꺼짐), 다른 곳에서 받는 정보, 개인정보 유출 통지를 더하고, 대한민국 밖 이용자에게는 영문 방침의 나라별 내용이 적용된다고 적었습니다</li>
+<li>2026-12-18: AI가 사진에서 알아본 음식 이름 가운데 음식 목록에서 찾지 못한 이름을, 누구의 것인지 알 수 없는 집계로 모아 음식 목록을 고치는 데 쓴다는 내용을 더했습니다(1조·5조). 수집 항목이 새로 생기는 변경이라 11조대로 2026-11-18에 미리 알리고 2026-12-18부터 적용합니다</li>
 </ul>
 </article>
 <article lang="en" data-l="en">
 <h1>Evn AI Privacy Policy</h1>
-<p><strong>Effective date: 2026-11-08</strong> · Operator: TIVIA Inc., A-428A, 47 Gangnam-daero 112-gil, Gangnam-gu, Seoul, 06121, Republic of Korea · Contact: support@evnai.app</p>
+<p><strong>Effective date: 2026-12-18</strong> · Operator: TIVIA Inc., A-428A, 47 Gangnam-daero 112-gil, Gangnam-gu, Seoul, 06121, Republic of Korea · Contact: support@evnai.app</p>
 <p>Evn AI (the "app") is made by TIVIA Inc. ("we", "us"), a company based in the Republic of Korea. This policy explains what the app handles, where that information goes, and how to delete it.</p>
 <h2>The short version</h2>
 <ul>
 <li>There's no sign-up. On first launch the app creates an anonymous ID. We don't ask for your phone number, and a name is optional (it stays on your device).</li>
 <li>To identify the foods, your food photo goes through our server function to Google's AI service (Gemini API, USA) or Anthropic's AI service (Claude API, USA). We don't store photos on our servers or in our server logs.</li>
 <li>Your scan photos and results (foods, glucose load, calories), the personal details you choose to add (name, height, weight and the weights you log, sex, birth year), your goals, badges and reminder settings stay on your device.</li>
+<li>When the AI names a food in your photo that isn't in our food list, or only loosely matches it, we keep that food name in an anonymous tally (the name and a count only) to improve the food list.</li>
 <li>Our analytics never receive your glucose load, grade, calories, body info, food names or photos. They do keep an approximate location estimated from your IP address (country, region and city), except from the usage events of devices set to Canada (section 11). They don't store the IP address itself, a postal code or coordinates; values stored until November 6, 2026 are deleted as described in section 1. Our server's sign-in session records and access logs do keep your IP address, and the access logs also keep the city and postal code estimated from it (section 1). The app doesn't ask for location permission or use GPS. You can turn off sharing usage data in the app; on devices set to Canada it starts off (section 7).</li>
 <li>We don't sell your personal information. On devices set to the US or South Korea, to measure our ads, we send Meta that the app was installed or opened, that a free trial started, and subscription events such as purchases, renewals and cancellations (sent by RevenueCat), with a device identifier and IP address. We never send health, food or body information, or photos (section 4). On those iPhones, we also see whether an install came from an App Store ad (Apple Ads), using Apple's standard attribution data (section 4). On devices set to other countries, the app doesn't do this ad measurement.</li>
 <li>"Delete all my data" in the Profile tab erases the data on your device and your anonymous account on our server.</li>
@@ -496,6 +507,13 @@ footer a{color:var(--muted)}
 <td>To fix our food database. Sent only when you report a result ("Something looks off") and pick what's wrong</td>
 </tr>
 <tr>
+<td>Tally of food names not found in our list (the food name the AI read from a photo, food database region, how it was matched, count, first and last week seen; no anonymous ID, photo or time)</td>
+<td>Supabase (Seoul)</td>
+<td>Not sent</td>
+<td>One year after the week it was last seen</td>
+<td>To improve our food list (legitimate interest). It never includes what you type into search. We can't tell whose scan a name came from, so it can't be deleted per user</td>
+</tr>
+<tr>
 <td>Server logs: our server function's logs (a hash of your anonymous ID, country, model name, response time, token counts, status) and infrastructure access and sign-in logs (IP address, request time, anonymous ID and session ID, device and app info (user agent), the country, region, city, postal code, time zone and network provider our hosting provider estimates from the IP address, and connection traits used to spot automated traffic)</td>
 <td>Supabase</td>
 <td>Not sent</td>
@@ -603,6 +621,7 @@ footer a{color:var(--muted)}
 <li><strong>RevenueCat's subscription records,</strong> which are kept to manage your subscription, restore purchases and handle refunds. To have them deleted, ask us (section 7) and we'll delete them for you.</li>
 <li><strong>Usage events in PostHog, and the approximate location kept with your anonymous ID.</strong> Ask us and we'll delete them (section 7).</li>
 <li><strong>Server logs,</strong> which stay for as long as Supabase keeps them (section 1).</li>
+<li><strong>The tally of food names not found in our list</strong> keeps only names and counts, with nothing that links them to you, so it stays after you delete your account and is deleted one year after the week a name was last seen.</li>
 <li><strong>Emails you send to support@evnai.app.</strong> Ask us and we'll delete them.</li>
 </ul>
 <p>You need to be online. If the app can't reach our server, it deletes nothing, not even on your device, and tells you, so you can try again when you're online.</p>
@@ -684,6 +703,7 @@ footer a{color:var(--muted)}
 <li>2026-11-06: Explained that the daily scan count is also used to count free scans when new users get more than one</li>
 <li>2026-11-07: Corrected this policy where it didn't match what already happens: it now describes the approximate location our analytics estimate from your IP address, the subscription events they receive from RevenueCat, sign-in session records, what our server logs keep and for how long, what we send Meta, and that Meta may estimate approximate location from the IP address it receives. We don't collect anything new, and our analytics no longer store postal codes, latitude and longitude, IP addresses, or the device identifiers RevenueCat passes on (copies already stored are deleted as described in section 1). As a correction of facts, it took effect the day it was published</li>
 <li>2026-11-08: Made this policy apply in every country where Evn AI is available, with sections for Canada, Australia and New Zealand. Ad measurement with Meta and Apple Ads now runs only on devices set to the US or South Korea, and our analytics don't estimate a location from the usage events of devices set to Canada. Added the "Share usage data" switch (off at first on devices set to Canada), the information we get from other sources, a 28-day response time (20 working days in New Zealand) and our breach notice</li>
+<li>2026-12-18: Added that food names the AI reads from photos but can't find in our food list are kept in an anonymous tally to improve the list (sections 1 and 5). Because this adds a new kind of data, we announced it here on 2026-11-18, 30 days before it took effect</li>
 </ul>
 </article>
 </main>
