@@ -121,7 +121,7 @@ footer a{color:var(--muted)}
 <td>Supabase(서울)</td>
 <td>없음</td>
 <td>7일 뒤 자동 삭제</td>
-<td>계약 이행(하루 30회 한도, 새 이용자에게 무료 스캔을 여러 번 드릴 때 쓴 횟수 세기)</td>
+<td>계약 이행(하루 30회 한도, 새 이용자에게 무료 스캔을 여러 번 드릴 때 쓴 횟수 세기, 하루 무료 스캔 세기)</td>
 </tr>
 <tr>
 <td>무료 스캔을 다 쓴 기록(익명 ID, 시각)</td>
@@ -378,6 +378,7 @@ footer a{color:var(--muted)}
 <li>2026-11-06: 새 이용자에게 무료 스캔을 여러 번 드릴 때 하루 스캔 횟수로 쓴 횟수를 센다고 적고, '무료 첫 스캔 기록'을 '무료 스캔 기록'으로 고쳤습니다</li>
 <li>2026-11-07: 실제와 다르게 적혀 있던 내용을 바로잡았습니다. 이용 통계 서비스가 IP 주소로 추정해 남기는 대략적 위치와 RevenueCat에서 받는 구독 이벤트, 로그인 세션 기록, 서버 운영 기록의 항목과 보관 기간, 메타에 보내는 항목(구독 이벤트·기기 식별자·IP 주소)과 메타가 IP 주소로 대략적 위치를 추정할 수 있다는 점, 국외 이전 받는 자의 연락처를 적었습니다. 새로 모으는 정보는 없고, 이용 통계 도구는 이제 우편번호·위도·경도와 IP 주소, RevenueCat이 넘겨주는 기기 식별자를 저장하지 않습니다(이미 저장된 값은 1조에 적은 대로 지웁니다). 사실을 바로잡는 변경이라 게시한 날부터 적용합니다</li>
 <li>2026-11-08: 광고 성과 측정(메타·Apple Ads)은 기기 지역이 한국·미국인 기기에서만 하고, 캐나다로 설정된 기기의 이용 통계 이벤트는 위치를 추정하지 않는다고 적었습니다. "앱 사용 정보 보내기" 설정(기기 지역이 캐나다인 기기는 처음에 꺼짐), 다른 곳에서 받는 정보, 개인정보 유출 통지를 더하고, 대한민국 밖 이용자에게는 영문 방침의 나라별 내용이 적용된다고 적었습니다</li>
+<li>2026-11-18: 하루 스캔 횟수로 날마다 열리는 무료 스캔도 센다고 적었습니다</li>
 <li>2026-12-18: AI가 사진에서 알아본 음식 이름 가운데 음식 목록에서 찾지 못한 이름을, 누구의 것인지 알 수 없는 집계로 모아 음식 목록을 고치는 데 쓴다는 내용을 더했습니다(1조·5조). 수집 항목이 새로 생기는 변경이라 11조대로 2026-11-18에 미리 알리고 2026-12-18부터 적용합니다</li>
 </ul>
 </article>
@@ -469,7 +470,7 @@ footer a{color:var(--muted)}
 <td>Supabase (Seoul)</td>
 <td>Not sent</td>
 <td>Deleted automatically after 7 days</td>
-<td>To apply the 30-scans-a-day limit and, when new users get more than one free scan, to count how many they've used</td>
+<td>To apply the 30-scans-a-day limit, to count how many free scans new users have used when they get more than one, and to count each day's free scan</td>
 </tr>
 <tr>
 <td>Record that the free scans were used up (anonymous ID, time)</td>
@@ -703,6 +704,7 @@ footer a{color:var(--muted)}
 <li>2026-11-06: Explained that the daily scan count is also used to count free scans when new users get more than one</li>
 <li>2026-11-07: Corrected this policy where it didn't match what already happens: it now describes the approximate location our analytics estimate from your IP address, the subscription events they receive from RevenueCat, sign-in session records, what our server logs keep and for how long, what we send Meta, and that Meta may estimate approximate location from the IP address it receives. We don't collect anything new, and our analytics no longer store postal codes, latitude and longitude, IP addresses, or the device identifiers RevenueCat passes on (copies already stored are deleted as described in section 1). As a correction of facts, it took effect the day it was published</li>
 <li>2026-11-08: Made this policy apply in every country where Evn AI is available, with sections for Canada, Australia and New Zealand. Ad measurement with Meta and Apple Ads now runs only on devices set to the US or South Korea, and our analytics don't estimate a location from the usage events of devices set to Canada. Added the "Share usage data" switch (off at first on devices set to Canada), the information we get from other sources, a 28-day response time (20 working days in New Zealand) and our breach notice</li>
+<li>2026-11-18: Explained that the daily scan count is also used to count a free scan that opens each day</li>
 <li>2026-12-18: Added that food names the AI reads from photos but can't find in our food list are kept in an anonymous tally to improve the list (sections 1 and 5). Because this adds a new kind of data, we announced it here on 2026-11-18, 30 days before it took effect</li>
 </ul>
 </article>
