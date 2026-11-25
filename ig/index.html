@@ -68,6 +68,22 @@ function evnDest(ua, rawTag, androidLive, rawPage) {
   var inapp = /Instagram|FBAN|FBAV|FB_IAB|FBIOS|Barcelona|Threads|musical_ly|BytedanceWebview|TikTok|Snapchat/i.test(ua);
   return { tag: tag, ios: ios, android: android, go: go, inapp: inapp, isAndroid: isAndroid };
 }
+// 수 세기: 쿠키·저장 없음, id는 페이지를 열 때마다 새 임의 값. 키가 없으면 아무것도 보내지 않는다
+var EVN_PH = "phc_q2RLpzKweebPrSRHMn2VNqVy79iAcTgYcwQpKsKVZy5S", EVN_ID = "";
+function evnTrack(ev, d, extra) {
+  try {
+    var ua = navigator.userAgent;
+    if (!EVN_PH || navigator.webdriver || /bot|crawl|spider|headless|lighthouse|facebookexternalhit|preview/i.test(ua)) return;
+    if (!EVN_ID) EVN_ID = "go_" + (window.crypto && crypto.randomUUID ? crypto.randomUUID() : String(Math.random()).slice(2) + Date.now());
+    var p = { go_tag: d.tag, go_path: "ig", platform: d.isAndroid ? "android" : /iphone|ipad|ipod/i.test(ua) ? "ios" : "other",
+      inapp: d.inapp, browser_lang: String(navigator.language || "").slice(0, 5), $process_person_profile: false, $geoip_disable: true };
+    for (var k in extra || {}) p[k] = extra[k];
+    var body = JSON.stringify({ api_key: EVN_PH, event: ev, distinct_id: EVN_ID, properties: p });
+    var url = "https://us.i.posthog.com/i/v0/e/";
+    if (!(navigator.sendBeacon && navigator.sendBeacon(url, new Blob([body], { type: "text/plain" }))))
+      fetch(url, { method: "POST", body: body, keepalive: true, mode: "no-cors" });
+  } catch (e) {}
+}
 (function () {
   var live = true;
   var q = new URLSearchParams(location.search);
@@ -75,13 +91,17 @@ function evnDest(ua, rawTag, androidLive, rawPage) {
   document.getElementById("ios").href = d.ios;
   document.getElementById("android").href = d.android;
   document.getElementById(live ? "soon" : "android").style.display = "none";
+  document.getElementById("ios").addEventListener("click", function () { evnTrack("go_store_click", d, { store: "ios" }); });
+  document.getElementById("android").addEventListener("click", function () { evnTrack("go_store_click", d, { store: "android" }); });
   // 한국 꼬리표(kr_)로 영어 페이지에 들어온 PC 방문자는 한국어 페이지로(모바일은 바로 스토어, 2026-10-22 PO)
   if (!d.go && true && d.tag.indexOf("kr_") === 0) { location.replace("../kr/" + location.search); return; }
   if (d.go && d.inapp) {
     document.body.className = "inapp";
     document.getElementById(d.isAndroid ? "ios" : "android").style.display = "none";
+    evnTrack("go_view", d, { mode: "button" });
     return;
   }
+  evnTrack("go_view", d, { mode: d.go ? "auto" : "choose" });
   if (d.go) location.replace(d.go);
 })();
 </script>
