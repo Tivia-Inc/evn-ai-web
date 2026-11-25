@@ -352,6 +352,7 @@ footer a{color:var(--muted)}
 </ul>
 <h2>9. 자동 수집 장치</h2>
 <p>앱은 쿠키를 쓰지 않습니다. PostHog SDK가 1조의 이용 통계 이벤트를 보냅니다("앱 사용 정보 보내기"를 끄면 보내지 않습니다, 6조). 기기 지역이 한국·미국인 기기(4-2)에서는 메타 SDK가 앱 설치·실행과 체험 시작 이벤트를 보내고(4조 4-2), iPhone 앱이 Apple 광고 기여 토큰을 RevenueCat에 보냅니다(4-3). 기기의 광고 식별자(IDFA·광고 ID)는 쓰지 않고 추적 허용 요청도 하지 않습니다. 메타는 받은 정보를 메타 광고의 성과 측정과 전달 최적화에 쓸 수 있습니다. 회사는 앱 안에서 다른 회사의 광고를 보여 주지 않습니다. 회사는 PostHog가 앱 이벤트의 접속 IP 주소와 RevenueCat이 구독 이벤트와 함께 넘겨주는 IP 주소·기기 식별자를 저장하지 않도록 설정했습니다. 다만 PostHog는 앱 이벤트의 IP 주소를 버리기 전에 그 주소로 시군구 수준의 대략적 위치를 추정해 남깁니다(1조. 기기 지역이 캐나다인 기기의 이벤트는 추정하지 않음). 메타 SDK는 어느 나라로 설정된 기기에서든 앱이 켜질 때 메타에서 설정을 받아 옵니다(4-2).</p>
+<p>회사 웹사이트(evnai.app)의 스토어 연결 페이지(앱 스토어로 이어 주는 링크 페이지)는 쿠키와 브라우저 저장소를 쓰지 않고, 방문 수와 스토어 버튼을 누른 수만 셉니다. 셀 때 링크 꼬리표(어느 게시물·광고의 링크인지), 페이지 경로, 기기 종류(어느 스토어로 이어 줄지 가르는 값), 다른 앱 안의 브라우저에서 열렸는지, 브라우저 언어를 PostHog(미국)로 보냅니다. 페이지를 열 때마다 새 임의 값을 붙이므로 방문끼리 이어지지 않고, 누구인지나 앱 이용과도 이어지지 않습니다. 보내는 과정에서 접속 IP 주소가 PostHog 서버에 닿지만 저장하지 않고, 그 주소로 위치를 추정하지도 않습니다. 보관 기간은 1조의 이용 통계 이벤트와 같습니다.</p>
 <h2>10. 개인정보 보호책임자와 권익 침해 구제</h2>
 <ul>
 <li>개인정보 보호책임자: 이태희(대표이사) · support@evnai.app</li>
@@ -379,6 +380,7 @@ footer a{color:var(--muted)}
 <li>2026-11-07: 실제와 다르게 적혀 있던 내용을 바로잡았습니다. 이용 통계 서비스가 IP 주소로 추정해 남기는 대략적 위치와 RevenueCat에서 받는 구독 이벤트, 로그인 세션 기록, 서버 운영 기록의 항목과 보관 기간, 메타에 보내는 항목(구독 이벤트·기기 식별자·IP 주소)과 메타가 IP 주소로 대략적 위치를 추정할 수 있다는 점, 국외 이전 받는 자의 연락처를 적었습니다. 새로 모으는 정보는 없고, 이용 통계 도구는 이제 우편번호·위도·경도와 IP 주소, RevenueCat이 넘겨주는 기기 식별자를 저장하지 않습니다(이미 저장된 값은 1조에 적은 대로 지웁니다). 사실을 바로잡는 변경이라 게시한 날부터 적용합니다</li>
 <li>2026-11-08: 광고 성과 측정(메타·Apple Ads)은 기기 지역이 한국·미국인 기기에서만 하고, 캐나다로 설정된 기기의 이용 통계 이벤트는 위치를 추정하지 않는다고 적었습니다. "앱 사용 정보 보내기" 설정(기기 지역이 캐나다인 기기는 처음에 꺼짐), 다른 곳에서 받는 정보, 개인정보 유출 통지를 더하고, 대한민국 밖 이용자에게는 영문 방침의 나라별 내용이 적용된다고 적었습니다</li>
 <li>2026-11-18: 하루 스캔 횟수로 날마다 열리는 무료 스캔도 센다고 적었습니다</li>
+<li>2026-11-25: 회사 웹사이트의 스토어 연결 페이지가 쿠키 없이 방문 수와 스토어 버튼을 누른 수를 센다는 내용을 더했습니다(9조)</li>
 <li>2026-12-18: AI가 사진에서 알아본 음식 이름 가운데 음식 목록에서 찾지 못한 이름을, 누구의 것인지 알 수 없는 집계로 모아 음식 목록을 고치는 데 쓴다는 내용을 더했습니다(1조·5조). 수집 항목이 새로 생기는 변경이라 11조대로 2026-11-18에 미리 알리고 2026-12-18부터 적용합니다</li>
 </ul>
 </article>
@@ -539,6 +541,8 @@ footer a{color:var(--muted)}
 <li><strong>Estimated by our service providers from your IP address:</strong> the approximate location in our analytics (not from the usage events of devices set to Canada) and the country, region, city, postal code, time zone and network provider our hosting provider estimates in its access logs (see the table above).</li>
 </ul>
 <p>We don't buy information about you. Apart from the Apple Ads attribution above, we don't get information about you from Meta or other advertising companies.</p>
+<h3>Our website's link pages</h3>
+<p>The pages on our website (evnai.app) that send you to your phone's app store count visits and taps on the store buttons. Each count carries the link's tag (which post or ad the link came from), the page, the kind of device (used to pick the right store), whether the page opened inside another app's browser, and the browser's language. These pages don't use cookies or browser storage, and every page view gets a new random ID, so visits aren't linked to each other, to you or to your use of the app. The counts go to PostHog (USA) and are kept as long as the usage events in the table above. Your IP address reaches PostHog when a count is sent, but it isn't stored and no location is estimated from it.</p>
 <h2>2. How food photos are handled</h2>
 <ol>
 <li>On your device, the photo is resized to 1024 px on the long side and its EXIF data, including location, is removed.</li>
@@ -705,6 +709,7 @@ footer a{color:var(--muted)}
 <li>2026-11-07: Corrected this policy where it didn't match what already happens: it now describes the approximate location our analytics estimate from your IP address, the subscription events they receive from RevenueCat, sign-in session records, what our server logs keep and for how long, what we send Meta, and that Meta may estimate approximate location from the IP address it receives. We don't collect anything new, and our analytics no longer store postal codes, latitude and longitude, IP addresses, or the device identifiers RevenueCat passes on (copies already stored are deleted as described in section 1). As a correction of facts, it took effect the day it was published</li>
 <li>2026-11-08: Made this policy apply in every country where Evn AI is available, with sections for Canada, Australia and New Zealand. Ad measurement with Meta and Apple Ads now runs only on devices set to the US or South Korea, and our analytics don't estimate a location from the usage events of devices set to Canada. Added the "Share usage data" switch (off at first on devices set to Canada), the information we get from other sources, a 28-day response time (20 working days in New Zealand) and our breach notice</li>
 <li>2026-11-18: Explained that the daily scan count is also used to count a free scan that opens each day</li>
+<li>2026-11-25: Added that the store link pages on our website count visits and taps on the store buttons, without cookies (section 1)</li>
 <li>2026-12-18: Added that food names the AI reads from photos but can't find in our food list are kept in an anonymous tally to improve the list (sections 1 and 5). Because this adds a new kind of data, we announced it here on 2026-11-18, 30 days before it took effect</li>
 </ul>
 </article>
